@@ -1,6 +1,6 @@
 package maks.deepdarkaddition.block
 
-import maks.deepdarkaddition.DeepDarkAddition
+import maks.deepdarkaddition.MainScript
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.state.BlockBehaviour
 import net.minecraftforge.registries.DeferredRegister
@@ -8,7 +8,7 @@ import net.minecraftforge.registries.ForgeRegistries
 import thedarkcolour.kotlinforforge.forge.registerObject
 
 object ModBlocks {
-    val REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, DeepDarkAddition.MOD_ID)
+    val REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, MainScript.MOD_ID)
 
     // the returned ObjectHolderDelegate can be used as a property delegate
     // this is automatically registered by the deferred registry at the correct times

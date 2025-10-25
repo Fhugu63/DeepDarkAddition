@@ -1,17 +1,16 @@
 package maks.deepdarkaddition.UI
 
-import maks.deepdarkaddition.DeepDarkAddition
+import com.mojang.blaze3d.vertex.PoseStack
+import maks.deepdarkaddition.CalculationScript
+import maks.deepdarkaddition.MainScript
 import maks.deepdarkaddition.item.ModItems
-import maks.deepdarkaddition.item.ResearhDiaryPartOne
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.GuiGraphics
 import net.minecraft.client.gui.components.*
 import net.minecraft.client.gui.screens.Screen
 import net.minecraft.network.chat.Component
-import net.minecraft.network.chat.FormattedText
 import net.minecraft.resources.ResourceLocation
-import net.minecraft.world.entity.Display.TextDisplay
-import java.lang.reflect.Array.set
+import kotlin.properties.Delegates
 
 
 class DiaryWindow(title: Component, getedNumOfPart: Int): Screen(title) {
@@ -25,9 +24,25 @@ class DiaryWindow(title: Component, getedNumOfPart: Int): Screen(title) {
 
     var TextInDiary: String = "";
 
+    val Location = ResourceLocation.tryBuild(MainScript.MOD_ID, "textures/ui/texturefordiarywindow.png")
+
+    val cs = CalculationScript()
+
     init {
         var TextInDiary: String = when {
-            numOfPart == 1 -> "1"
+            numOfPart == 1 -> "З-здравствуйте искатели, \n" +
+                    "я решил начать дневник\n" +
+                    "так как обнаружил какой-то\n" +
+                    "заброшенный город который\n" +
+                    "полностью окутон какой-то\n" +
+                    "чёрной, непонятной массой.\n" +
+                    "Спустя час после прошлой\n" +
+                    "записи, я понял что лучше...\n" +
+                    "Не шуметь... Если же вы ре-\n" +
+                    "шите издать громкий звук,\n" +
+                    "то из под земли выле-\n" +
+                    "зит какая-то сущность,\n" +
+                    "я решил назвать её «Варден»."
             numOfPart == 2 -> "2"
             numOfPart == 3 -> "3"
             numOfPart == 4 -> "4"
@@ -39,24 +54,61 @@ class DiaryWindow(title: Component, getedNumOfPart: Int): Screen(title) {
         this.TextInDiary = TextInDiary
     }
 
+    lateinit var widgetText: MultiLineTextWidget
+
+    var widthOfBook by Delegates.notNull<Int>()
+    var heightOfBook by Delegates.notNull<Int>()
+
     override fun init() {
         super.init()
         //this.addRenderableOnly(MultiLine(this.font, width/2-150, height/2-100, width/2+150, height/2+100, Component.translatable("fagagfd /ndsf")))
         //this.addRenderableOnly()
-        this.addRenderableOnly(MultiLineTextWidget(100, 100, Component.translatable(TextInDiary), this.font))
-        this.addRenderableOnly(ImageWidget(300, 190, ResourceLocation.tryBuild(DeepDarkAddition.MOD_ID,"textures/UI/TextureFowDiaryWindow")))
+
+        val screen: Screen? = Minecraft.getInstance().screen
+
+        widthOfBook = (screen?.width ?: 1) / 2
+        heightOfBook = (((screen?.width ?: 1)/2)/1.5).toInt()
+
+        val book = this.addRenderableWidget(ImageWidget(widthOfBook, heightOfBook, Location))
+        book.x = cs.calculateCenterOfScrennX(widthOfBook)
+        book.y = cs.calculateCenterOfScrennY(heightOfBook)
+
+
+
+
     }
 
     override fun render(graphics: GuiGraphics, pMouseX: Int, pMouseY: Int, pPartialTick: Float) {
         //graphics.draw(this.font, "sadfhaer atrhnaja teh", width/2, height/2, 15)
+        val multilineText = MultiLineTextWidget((cs.calculateCenterOfScrennX(widthOfBook)/1).toInt(), 0, Component.translatable(TextInDiary), this.font)
+        //widgetText = this.addRenderableOnly(multilineText)
+        multilineText.setColor(0)
+        //graphics.fill(width/2-150, height/2-200, width/2+150, height/2+200, 0, -1000255255)
+        val pose: PoseStack = graphics.pose()
+        pose.pushPose()
+        //widgetText.render(graphics, pMouseX, pMouseY, pPartialTick)
+        val scaleX =  (((this.width ?: 1)/2)/350F).toFloat()
+        val scaleY = scaleX*1.4F
+        pose.scale(scaleX, scaleY, 1.0F)
+        multilineText.render(graphics, pMouseX, pMouseY, pPartialTick)
+        pose.popPose()
 
-        graphics.fill(width/2-150, height/2-200, width/2+150, height/2+200, 0, -1000255255)
+
+        //multilineText.width = ((screen?.width ?: 1)/4.5).toInt()
+        //multilineText.height = ((height/4/0.5)/2).toInt()
+
+
+
+        //widgetText.render(graphics, pMouseX, pMouseY, pPartialTick)
+        this.renderBackground(graphics);
+        //widgetText.width = (width/4.5).toInt()
+        //widgetText.height = ((height/4/0.5)/2).toInt()
 
         super.render(graphics, pMouseX, pMouseY, pPartialTick)
     }
 
     override fun removed() {
-        ModItems.RESEARHDIARYPARTONE().flag = false
+        ModItems().RESEARHDIARYPARTONE().flag = false
         super.removed()
     }
 }

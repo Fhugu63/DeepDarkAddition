@@ -9,7 +9,7 @@ modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
 # optional
-#credits="The DeepDarkAddition dev team"
+#credits="The MainScript dev team"
 authors="${mod_authors}"
 description='''${mod_description}'''
 [[dependencies.${mod_id}]]
