@@ -1,12 +1,15 @@
 package maks.deepdarkaddition.events
 
 import maks.deepdarkaddition.MainScript
+import maks.deepdarkaddition.entity.ModEntities
+import maks.deepdarkaddition.entity.custom.HungrySoulEntity
 import maks.deepdarkaddition.item.ModItems
 import net.minecraft.client.Minecraft
 import net.minecraft.core.SectionPos.z
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityType
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent
 import net.minecraftforge.event.entity.living.LivingDeathEvent
 import net.minecraftforge.event.entity.player.AttackEntityEvent
 import net.minecraftforge.eventbus.api.SubscribeEvent

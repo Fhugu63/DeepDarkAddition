@@ -2,6 +2,7 @@ package maks.deepdarkaddition
 
 import maks.deepdarkaddition.block.ModBlocks
 import maks.deepdarkaddition.entity.ModEntities
+import maks.deepdarkaddition.entity.custom.HungrySoulEntity
 import maks.deepdarkaddition.events.ModEvents
 import maks.deepdarkaddition.item.ModItems
 import net.maks.deepdarkaddition.entity.client.luiza.HungrySoulRender
@@ -38,7 +39,7 @@ class MainScript {
 
         ModEntities.register(MOD_BUS)
 
-        MinecraftForge.EVENT_BUS.register(ModEvents());
+        MinecraftForge.EVENT_BUS.register(ModEvents())
 
         //MinecraftForge.EVENT_BUS.register(ModEvents())
 

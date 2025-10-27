@@ -10,10 +10,9 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider
 import net.minecraft.client.renderer.entity.MobRenderer
 import net.minecraft.resources.ResourceLocation
 
-class HungrySoulRender(pContext: EntityRendererProvider.Context) : MobRenderer<HungrySoulEntity, HungrySoulModel<HungrySoulEntity>>(
-    pContext,
-    HungrySoulModel(pContext.bakeLayer(ModModelLayers.HUNGRY_SOUL_LAYER)), 0.5f //проклятая строка кода
-) {
+class HungrySoulRender(pContext: EntityRendererProvider.Context) :
+    MobRenderer<HungrySoulEntity, HungrySoulModel<HungrySoulEntity>>(pContext,
+        HungrySoulModel(pContext.bakeLayer(ModModelLayers.HUNGRY_SOUL_LAYER)), 1f) {
     override fun getTextureLocation(pEntity: HungrySoulEntity): ResourceLocation? {
         return ResourceLocation.tryBuild(MainScript.MOD_ID, "textures/entity/hungrysoul.png")
         //return null;
@@ -24,7 +23,7 @@ class HungrySoulRender(pContext: EntityRendererProvider.Context) : MobRenderer<H
         pBuffer: MultiBufferSource, pPackedLight: Int
     ) {
         if (pEntity.isBaby()) {
-            pMatrixStack.scale(1f, 1.8f, 1f)
+            pMatrixStack.scale(1f, 1f, 1f)
         }
 
 

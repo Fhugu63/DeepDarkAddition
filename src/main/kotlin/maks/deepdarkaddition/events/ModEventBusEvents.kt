@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod
 class ModEventBusEvents {
     @SubscribeEvent
     fun registerAttributes(event: EntityAttributeCreationEvent) {
+        println("event has work!")
         event.put(ModEntities.HUNGRYSOULENTITY.get(), HungrySoulEntity.createAttributes().build())
     }
 }

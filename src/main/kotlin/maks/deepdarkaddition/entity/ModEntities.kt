@@ -17,10 +17,10 @@ object ModEntities {
         DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MainScript.MOD_ID)
 
 
-    val HUNGRYSOULENTITY: RegistryObject<EntityType<HungrySoulEntity>> = ENTITY_TYPES.register("hungrysoulentity") {
+    val HUNGRYSOULENTITY = ENTITY_TYPES.register("hungrysoulentity") {
         EntityType.Builder.of(::HungrySoulEntity, MobCategory.CREATURE
         )
-            .sized(1f, 2f).build("hungrysoulentity")
+            .sized(1f, 1f).build("hungrysoulentity")
     };
 
     fun register(eventBus: IEventBus) {
