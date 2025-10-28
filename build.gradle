@@ -7,6 +7,7 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '2.0.0'
     // OPTIONAL Kotlin Serialization plugin
     //id 'org.jetbrains.kotlin.plugin.serialization' version '2.0.0'
+    id "fabric-loom" version "0.4.1"
 }
 
 version = mod_version
@@ -101,7 +102,10 @@ repositories {
 
 dependencies {
     // Use the latest version of Minecraft Forge
-    minecraft "net.minecraftforge:forge:$minecraft_version-$forge_version"
+    minecraft "com.mojang:minecraft:${stonecutter.current.project}"
+    mappings "net.fabricmc:yarn:${property('deps.yarn_mappings')}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${property('deps.fabric_loader')}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${property('deps.fabric_api')}"
 
     implementation "thedarkcolour:kotlinforforge:$kff_version"
 }
@@ -118,16 +122,23 @@ def replaceProperties = [
         mod_authors: mod_authors, mod_description: mod_description
 ]
 processResources {
-    inputs.properties replaceProperties
-    replaceProperties.put 'project', project
+    inputs.property "minecraft", stonecutter.current.version
 
-    filesMatching(resourceTargets) {
-        expand replaceProperties
+    filesMatching("fabric.mod.json") {
+        expand "minecraft": stonecutter.current.version
     }
 }
 
 compileKotlin {
     kotlinOptions.jvmTarget = "17"
+}
+
+java {
+    withSourcesJar()
+    def java = stonecutter.eval(stonecutter.current.version, ">=1.20.5")
+            ? JavaVersion.VERSION_21 : JavaVersion.VERSION_17
+    targetCompatibility = java
+    sourceCompatibility = java
 }
 
 jar {
@@ -160,5 +171,12 @@ publishing {
         maven {
             url "file://${project.projectDir}/mcmodsrepo"
         }
+    }
+}
+
+loom {
+    runConfigs.all {
+        ideConfigGenerated true // Run configurations are not created for subprojects by default
+        runDir "../../run" // Use a shared run folder and create separate worlds
     }
 }

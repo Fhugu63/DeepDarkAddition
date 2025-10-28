@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.Mod
 
 
 @Mod.EventBusSubscriber(modid = MainScript.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-class ModEventBusEvents {
+object ModEventBusEvents {
     @SubscribeEvent
     fun registerAttributes(event: EntityAttributeCreationEvent) {
         println("event has work!")

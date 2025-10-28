@@ -32,14 +32,6 @@ class HungrySoulEntity(pEntityType: EntityType<out Animal>?, pLevel: Level?) : A
     override fun getBreedOffspring(pLevel: ServerLevel, pOtherParent: AgeableMob): HungrySoulEntity? {
         return ModEntities.HUNGRYSOULENTITY.get().create(pLevel)
     }
-
-    fun createAttributes(): AttributeSupplier.Builder {
-        return createLivingAttributes()
-            .add(Attributes.MAX_HEALTH, 10.0)
-            .add(Attributes.MOVEMENT_SPEED, 0.5)
-            .add(Attributes.ARMOR_TOUGHNESS, 0.5)
-            .add(Attributes.ATTACK_KNOCKBACK, 0.0)
-    }
     
     companion object {
         fun createAttributes(): AttributeSupplier.Builder {
@@ -48,6 +40,7 @@ class HungrySoulEntity(pEntityType: EntityType<out Animal>?, pLevel: Level?) : A
                 .add(Attributes.MOVEMENT_SPEED, 0.5)
                 .add(Attributes.ARMOR_TOUGHNESS, 0.5)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.0)
+                .add(Attributes.FOLLOW_RANGE, 1.0)
         }
     }
 }

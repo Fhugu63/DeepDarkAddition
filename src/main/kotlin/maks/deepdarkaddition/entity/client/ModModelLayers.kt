@@ -1,4 +1,4 @@
-package net.maks.deepdarkaddition.entity.client
+package maks.deepdarkaddition.entity.client
 
 import maks.deepdarkaddition.MainScript
 import net.minecraft.client.model.geom.ModelLayerLocation

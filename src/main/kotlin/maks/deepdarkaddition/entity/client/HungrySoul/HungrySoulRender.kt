@@ -1,10 +1,10 @@
-package net.maks.deepdarkaddition.entity.client.luiza
+package maks.deepdarkaddition.entity.client.luiza
 
 import com.mojang.blaze3d.vertex.PoseStack
 import maks.deepdarkaddition.MainScript
 import maks.deepdarkaddition.entity.client.HungrySoul.HungrySoulModel
 import maks.deepdarkaddition.entity.custom.HungrySoulEntity
-import net.maks.deepdarkaddition.entity.client.ModModelLayers
+import maks.deepdarkaddition.entity.client.ModModelLayers
 import net.minecraft.client.renderer.MultiBufferSource
 import net.minecraft.client.renderer.entity.EntityRendererProvider
 import net.minecraft.client.renderer.entity.MobRenderer

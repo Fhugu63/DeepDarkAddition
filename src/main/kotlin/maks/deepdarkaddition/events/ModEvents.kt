@@ -38,7 +38,9 @@ class ModEvents {
         if (entity.type == EntityType.WARDEN) {
             MainScript.LOGGER.info("warden is died")
 
-
+            val myEntity = ModEntities.HUNGRYSOULENTITY.get().create(player?.level())
+            myEntity?.moveTo(entity.x, entity.y, entity.z)
+            player?.level()?.addFreshEntity(myEntity)
         }
     }
 }

@@ -63,15 +63,11 @@ class DiaryWindow(title: Component, getedNumOfPart: Int): Screen(title) {
         super.init()
         //this.addRenderableOnly(MultiLine(this.font, width/2-150, height/2-100, width/2+150, height/2+100, Component.translatable("fagagfd /ndsf")))
         //this.addRenderableOnly()
-
         val screen: Screen? = Minecraft.getInstance().screen
-
         widthOfBook = (screen?.width ?: 1) / 2
         heightOfBook = (((screen?.width ?: 1)/2)/1.5).toInt()
 
-        val book = this.addRenderableWidget(ImageWidget(widthOfBook, heightOfBook, Location))
-        book.x = cs.calculateCenterOfScrennX(widthOfBook)
-        book.y = cs.calculateCenterOfScrennY(heightOfBook)
+
 
 
 
@@ -79,16 +75,27 @@ class DiaryWindow(title: Component, getedNumOfPart: Int): Screen(title) {
     }
 
     override fun render(graphics: GuiGraphics, pMouseX: Int, pMouseY: Int, pPartialTick: Float) {
+        val book = addRenderableWidget(ImageWidget(widthOfBook, heightOfBook, Location))
+        book.x = cs.calculateCenterOfScrennX(widthOfBook)
+        book.y = cs.calculateCenterOfScrennY(heightOfBook)
+
+        book.render(graphics, pMouseX, pMouseY, pPartialTick)
+
+        val screen: Screen? = Minecraft.getInstance().screen
+        val scaleX =  (((screen?.width ?: 1)/2)/210).toFloat()
+        val scaleY = scaleX*1.4F
         //graphics.draw(this.font, "sadfhaer atrhnaja teh", width/2, height/2, 15)
-        val multilineText = MultiLineTextWidget((cs.calculateCenterOfScrennX(widthOfBook)/1).toInt(), 0, Component.translatable(TextInDiary), this.font)
+        val multilineText = MultiLineTextWidget(book.x/10, book.y, Component.translatable(TextInDiary), this.font)
+
+
         //widgetText = this.addRenderableOnly(multilineText)
         multilineText.setColor(0)
         //graphics.fill(width/2-150, height/2-200, width/2+150, height/2+200, 0, -1000255255)
         val pose: PoseStack = graphics.pose()
         pose.pushPose()
         //widgetText.render(graphics, pMouseX, pMouseY, pPartialTick)
-        val scaleX =  (((this.width ?: 1)/2)/350F).toFloat()
-        val scaleY = scaleX*1.4F
+
+        multilineText.x = cs.calculateCenterOfScrennX(scaleX.toInt())
         pose.scale(scaleX, scaleY, 1.0F)
         multilineText.render(graphics, pMouseX, pMouseY, pPartialTick)
         pose.popPose()

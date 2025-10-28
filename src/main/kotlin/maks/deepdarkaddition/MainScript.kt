@@ -5,8 +5,9 @@ import maks.deepdarkaddition.entity.ModEntities
 import maks.deepdarkaddition.entity.custom.HungrySoulEntity
 import maks.deepdarkaddition.events.ModEvents
 import maks.deepdarkaddition.item.ModItems
-import net.maks.deepdarkaddition.entity.client.luiza.HungrySoulRender
+import maks.deepdarkaddition.entity.client.luiza.HungrySoulRender
 import net.minecraft.client.Minecraft
+import net.minecraft.client.main.GameConfig
 import net.minecraft.client.renderer.entity.EntityRenderers
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.Mod
