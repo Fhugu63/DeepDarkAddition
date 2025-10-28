@@ -3,10 +3,9 @@ pluginManagement {
         gradlePluginPortal()
         maven { url = 'https://maven.minecraftforge.net/' }
         maven { url = 'https://maven.parchmentmc.org' }
-        maven { url = '"https://maven.kikugie.dev/snapshots"' }
         maven {
-            name = 'Fabric'
-            url = 'https://maven.fabricmc.net/'
+            url = 'https://maven.kikugie.dev/snapshots'
+            name = 'KikuGie Snapshots'
         }
     }
 }
@@ -22,9 +21,7 @@ stonecutter {
 
     create(rootProject) {
         vers("1.20.1-forge", "1.20.1")
-        vers("1.20.1-fabric", "1.20.1")
         vers("1.20.1-neoforge", "1.20.1")
-        vers("1.21-fabric", "1.21")
-        vers("1.21-neoforge", "1.21")
+        vers("1.21.4-neoforge", "1.20.1")
     }
 }
