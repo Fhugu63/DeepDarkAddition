@@ -1,3 +1,17 @@
+without stacktrace:
+Build file 'C:\Users\Kuler\Desktop\KotlinProjects\DeepDarkAddition\stonecutter.gradle' line: 6
+
+A problem occurred evaluating root project 'DeepDarkAddition'.
+> Could not get unknown property 'chiseled' for extension 'stonecutter' of type dev.kikugie.stonecutter.controller.StonecutterControllerImpl.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+
+with stacktrace:
 Running Stonecutter 0.7.10
 NOTICE: Limited Groovy DSL support for Stonecutter
 
@@ -9,18 +23,14 @@ documentation lookup and debugging, it's recommended to use Kotlin DSL.
 For more information see: 
   - https://stonecutter.codeberg.page/wiki/faq#groovy-support
 
-> Configure project :1.20.1-fabric
-Fabric Loom: 0.4.1 Build(jenkins #1)
-
 FAILURE: Build failed with an exception.
 
 * Where:
-Build file 'C:\Users\Kuler\Desktop\KotlinProjects\DeepDarkAddition\build.gradle' line: 10
+Build file 'C:\Users\Kuler\Desktop\KotlinProjects\DeepDarkAddition\stonecutter.gradle' line: 6
 
 * What went wrong:
-An exception occurred applying plugin request [id: 'fabric-loom', version: '0.4.1']
-> Failed to apply plugin 'fabric-loom'.
-   > Cannot add extension with name 'minecraft', as there is an extension already registered with that name.
+A problem occurred evaluating root project 'DeepDarkAddition'.
+> Could not get unknown property 'chiseled' for extension 'stonecutter' of type dev.kikugie.stonecutter.controller.StonecutterControllerImpl.
 
 * Try:
 > Run with --info or --debug option to get more log output.
@@ -28,13 +38,11 @@ An exception occurred applying plugin request [id: 'fabric-loom', version: '0.4.
 > Get more help at https://help.gradle.org.
 
 * Exception is:
-org.gradle.api.plugins.InvalidPluginException: An exception occurred applying plugin request [id: 'fabric-loom', version: '0.4.1']
-	at org.gradle.plugin.use.internal.DefaultPluginRequestApplicator.exceptionOccurred(DefaultPluginRequestApplicator.java:179)
-	at org.gradle.plugin.use.internal.DefaultPluginRequestApplicator.access$400(DefaultPluginRequestApplicator.java:52)
-	at org.gradle.plugin.use.internal.DefaultPluginRequestApplicator$ApplyAction.apply(DefaultPluginRequestApplicator.java:160)
-	at org.gradle.plugin.use.internal.DefaultPluginRequestApplicator.lambda$applyPlugins$1(DefaultPluginRequestApplicator.java:130)
-	at org.gradle.plugin.use.internal.DefaultPluginRequestApplicator.applyPlugins(DefaultPluginRequestApplicator.java:130)
-	at org.gradle.configuration.DefaultScriptPluginFactory$ScriptPluginImpl.apply(DefaultScriptPluginFactory.java:120)
+org.gradle.api.GradleScriptException: A problem occurred evaluating root project 'DeepDarkAddition'.
+	at org.gradle.groovy.scripts.internal.DefaultScriptRunnerFactory$ScriptRunnerImpl.run(DefaultScriptRunnerFactory.java:93)
+	at org.gradle.configuration.DefaultScriptPluginFactory$ScriptPluginImpl.lambda$apply$0(DefaultScriptPluginFactory.java:137)
+	at org.gradle.configuration.ProjectScriptTarget.addConfiguration(ProjectScriptTarget.java:79)
+	at org.gradle.configuration.DefaultScriptPluginFactory$ScriptPluginImpl.apply(DefaultScriptPluginFactory.java:140)
 	at org.gradle.configuration.BuildOperationScriptPlugin$1.run(BuildOperationScriptPlugin.java:68)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
@@ -79,7 +87,7 @@ org.gradle.api.plugins.InvalidPluginException: An exception occurred applying pl
 	at org.gradle.api.internal.project.ProjectLifecycleController.ensureSelfConfigured(ProjectLifecycleController.java:84)
 	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.ensureConfigured(DefaultProjectStateRegistry.java:381)
 	at org.gradle.execution.TaskPathProjectEvaluator.configure(TaskPathProjectEvaluator.java:34)
-	at org.gradle.execution.TaskPathProjectEvaluator.configureHierarchy(TaskPathProjectEvaluator.java:50)
+	at org.gradle.execution.TaskPathProjectEvaluator.configureHierarchy(TaskPathProjectEvaluator.java:48)
 	at org.gradle.configuration.DefaultProjectsPreparer.prepareProjects(DefaultProjectsPreparer.java:42)
 	at org.gradle.configuration.BuildTreePreparingProjectsPreparer.prepareProjects(BuildTreePreparingProjectsPreparer.java:65)
 	at org.gradle.configuration.BuildOperationFiringProjectsPreparer$ConfigureBuild.run(BuildOperationFiringProjectsPreparer.java:52)
@@ -223,36 +231,13 @@ org.gradle.api.plugins.InvalidPluginException: An exception occurred applying pl
 	at org.gradle.launcher.daemon.server.DaemonStateCoordinator$1.run(DaemonStateCoordinator.java:297)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
-Caused by: org.gradle.api.internal.plugins.PluginApplicationException: Failed to apply plugin 'fabric-loom'.
-	at org.gradle.api.internal.plugins.DefaultPluginManager.doApply(DefaultPluginManager.java:176)
-	at org.gradle.api.internal.plugins.DefaultPluginManager.apply(DefaultPluginManager.java:148)
-	at org.gradle.plugin.use.resolve.internal.ArtifactRepositoriesPluginResolver$ExternalPluginResolution.applyTo(ArtifactRepositoriesPluginResolver.java:151)
-	at org.gradle.plugin.use.internal.DefaultPluginRequestApplicator$ApplyAction.apply(DefaultPluginRequestApplicator.java:156)
+Caused by: groovy.lang.MissingPropertyException: Could not get unknown property 'chiseled' for extension 'stonecutter' of type dev.kikugie.stonecutter.controller.StonecutterControllerImpl.
+	at org.gradle.internal.metaobject.AbstractDynamicObject.getMissingProperty(AbstractDynamicObject.java:85)
+	at org.gradle.internal.metaobject.AbstractDynamicObject.getProperty(AbstractDynamicObject.java:62)
+	at dev.kikugie.stonecutter.controller.StonecutterControllerImpl_Decorated.getProperty(Unknown Source)
+	at stonecutter_2x640mba5255y2bm5rl9q9qe1.run(C:\Users\Kuler\Desktop\KotlinProjects\DeepDarkAddition\stonecutter.gradle:6)
+	at org.gradle.groovy.scripts.internal.DefaultScriptRunnerFactory$ScriptRunnerImpl.run(DefaultScriptRunnerFactory.java:91)
 	... 191 more
-Caused by: java.lang.IllegalArgumentException: Cannot add extension with name 'minecraft', as there is an extension already registered with that name.
-	at org.gradle.internal.extensibility.ExtensionsStorage.add(ExtensionsStorage.java:40)
-	at org.gradle.internal.extensibility.DefaultConvention.add(DefaultConvention.java:133)
-	at org.gradle.internal.extensibility.DefaultConvention.addWithDefaultPublicType(DefaultConvention.java:225)
-	at org.gradle.internal.extensibility.DefaultConvention.create(DefaultConvention.java:139)
-	at net.fabricmc.loom.AbstractPlugin.apply(AbstractPlugin.java:89)
-	at net.fabricmc.loom.LoomGradlePlugin.apply(LoomGradlePlugin.java:70)
-	at net.fabricmc.loom.LoomGradlePlugin.apply(LoomGradlePlugin.java:54)
-	at org.gradle.api.internal.plugins.ImperativeOnlyPluginTarget.applyImperative(ImperativeOnlyPluginTarget.java:43)
-	at org.gradle.api.internal.plugins.RuleBasedPluginTarget.applyImperative(RuleBasedPluginTarget.java:51)
-	at org.gradle.api.internal.plugins.DefaultPluginManager.addPlugin(DefaultPluginManager.java:190)
-	at org.gradle.api.internal.plugins.DefaultPluginManager.access$100(DefaultPluginManager.java:54)
-	at org.gradle.api.internal.plugins.DefaultPluginManager$AddPluginBuildOperation.run(DefaultPluginManager.java:285)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
-	at org.gradle.api.internal.plugins.DefaultPluginManager.lambda$doApply$0(DefaultPluginManager.java:170)
-	at org.gradle.internal.code.DefaultUserCodeApplicationContext.apply(DefaultUserCodeApplicationContext.java:43)
-	at org.gradle.api.internal.plugins.DefaultPluginManager.doApply(DefaultPluginManager.java:169)
-	... 194 more
 
 
-CONFIGURE FAILED in 2s
+CONFIGURE FAILED in 415ms
