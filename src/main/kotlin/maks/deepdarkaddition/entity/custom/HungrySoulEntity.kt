@@ -36,9 +36,9 @@ class HungrySoulEntity(pEntityType: EntityType<out Animal>?, pLevel: Level?) : A
     companion object {
         fun createAttributes(): AttributeSupplier.Builder {
             return createLivingAttributes()
-                .add(Attributes.MAX_HEALTH, 10.0)
+                .add(Attributes.MAX_HEALTH, 100.0)
                 .add(Attributes.MOVEMENT_SPEED, 0.5)
-                .add(Attributes.ARMOR_TOUGHNESS, 0.5)
+                .add(Attributes.ARMOR_TOUGHNESS, 100.0)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.0)
                 .add(Attributes.FOLLOW_RANGE, 1.0)
         }

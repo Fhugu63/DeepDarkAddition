@@ -75,18 +75,21 @@ class DiaryWindow(title: Component, getedNumOfPart: Int): Screen(title) {
     }
 
     override fun render(graphics: GuiGraphics, pMouseX: Int, pMouseY: Int, pPartialTick: Float) {
-        val book = addRenderableWidget(ImageWidget(widthOfBook, heightOfBook, Location))
+        val book = this.addRenderableWidget(ImageWidget(widthOfBook, heightOfBook, Location))
         book.x = cs.calculateCenterOfScrennX(widthOfBook)
         book.y = cs.calculateCenterOfScrennY(heightOfBook)
 
-        book.render(graphics, pMouseX, pMouseY, pPartialTick)
+        //book.render(graphics, pMouseX, pMouseY, pPartialTick)
 
         val screen: Screen? = Minecraft.getInstance().screen
-        val scaleX =  (((screen?.width ?: 1)/2)/210).toFloat()
+        val scaleX =  ((screen?.width ?: 1) / 2).toFloat()
         val scaleY = scaleX*1.4F
         //graphics.draw(this.font, "sadfhaer atrhnaja teh", width/2, height/2, 15)
-        val multilineText = MultiLineTextWidget(book.x/10, book.y, Component.translatable(TextInDiary), this.font)
+        val multilineText = this.addRenderableWidget(MultiLineTextWidget(book.x+10, book.y+10, Component.translatable(TextInDiary), this.font))
+        //multilineText.width = (screen?.width ?: 1) / 2
+        //multilineText.height = book.height
 
+        MainScript.LOGGER.info(multilineText.width)
 
         //widgetText = this.addRenderableOnly(multilineText)
         multilineText.setColor(0)
@@ -95,7 +98,6 @@ class DiaryWindow(title: Component, getedNumOfPart: Int): Screen(title) {
         pose.pushPose()
         //widgetText.render(graphics, pMouseX, pMouseY, pPartialTick)
 
-        multilineText.x = cs.calculateCenterOfScrennX(scaleX.toInt())
         pose.scale(scaleX, scaleY, 1.0F)
         multilineText.render(graphics, pMouseX, pMouseY, pPartialTick)
         pose.popPose()

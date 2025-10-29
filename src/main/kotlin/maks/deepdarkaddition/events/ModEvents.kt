@@ -7,8 +7,11 @@ import maks.deepdarkaddition.item.ModItems
 import net.minecraft.client.Minecraft
 import net.minecraft.core.SectionPos.z
 import net.minecraft.nbt.CompoundTag
+import net.minecraft.server.level.ServerEntity
+import net.minecraft.server.level.ServerPlayer
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityType
+import net.minecraftforge.event.CommandEvent
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent
 import net.minecraftforge.event.entity.living.LivingDeathEvent
 import net.minecraftforge.event.entity.player.AttackEntityEvent
@@ -21,26 +24,40 @@ class ModEvents {
 
     var player = minecraft.level?.getPlayerByUUID(UUID.fromString(""))
 
+    var flagSpawnSoul = true
+
+    val logger = MainScript.LOGGER
+
     @SubscribeEvent
     fun attackEntity(event: AttackEntityEvent) {
         val entity = event.target
+            if (entity.type == EntityType.WARDEN) {
+                MainScript.LOGGER.info("warden is attacked")
+                player = event.entity
+            }
 
-        if (entity.type == EntityType.WARDEN) {
-            MainScript.LOGGER.info("warden is attacked")
-            player = event.entity
-        }
+        flagSpawnSoul = true
     }
 
     @SubscribeEvent
     fun dropItemFromEntity(event: LivingDeathEvent) {
         val entity = event.entity
+        if (flagSpawnSoul) {
+            if (entity.type == EntityType.WARDEN) {
+                MainScript.LOGGER.info("warden is died")
 
-        if (entity.type == EntityType.WARDEN) {
-            MainScript.LOGGER.info("warden is died")
-
-            val myEntity = ModEntities.HUNGRYSOULENTITY.get().create(player?.level())
-            myEntity?.moveTo(entity.x, entity.y, entity.z)
-            player?.level()?.addFreshEntity(myEntity)
+                val myEntity = ModEntities.HUNGRYSOULENTITY.get().create(player?.level())
+                myEntity?.moveTo(entity.x, entity.y, entity.z)
+                myEntity?.isBaby = true
+                player?.level()?.addFreshEntity(myEntity)
+                flagSpawnSoul = false
+            }
         }
     }
+
+    @SubscribeEvent
+    fun executedCommand(event: CommandEvent) {
+        logger.info(event.listenerList)
+    }
+
 }
