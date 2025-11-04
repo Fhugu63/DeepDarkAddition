@@ -9,6 +9,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes
 import net.minecraft.world.entity.ai.goal.BreedGoal
 import net.minecraft.world.entity.ai.goal.FloatGoal
 import net.minecraft.world.entity.animal.Animal
+import net.minecraft.world.entity.monster.Ghast.RandomFloatAroundGoal
 import net.minecraft.world.level.Level
 
 class HungrySoulEntity(pEntityType: EntityType<out Animal>?, pLevel: Level?) : Animal(pEntityType, pLevel) {
@@ -36,11 +37,13 @@ class HungrySoulEntity(pEntityType: EntityType<out Animal>?, pLevel: Level?) : A
     companion object {
         fun createAttributes(): AttributeSupplier.Builder {
             return createLivingAttributes()
-                .add(Attributes.MAX_HEALTH, 100.0)
+                .add(Attributes.MAX_HEALTH, 1000.0)
                 .add(Attributes.MOVEMENT_SPEED, 0.5)
                 .add(Attributes.ARMOR_TOUGHNESS, 100.0)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.0)
                 .add(Attributes.FOLLOW_RANGE, 1.0)
         }
+
+        val test = ""
     }
 }

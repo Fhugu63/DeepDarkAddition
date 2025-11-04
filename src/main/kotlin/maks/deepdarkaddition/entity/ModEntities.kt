@@ -20,7 +20,7 @@ object ModEntities {
     val HUNGRYSOULENTITY = ENTITY_TYPES.register("hungrysoulentity") {
         EntityType.Builder.of(::HungrySoulEntity, MobCategory.CREATURE
         )
-            .sized(5f, 5f).build("hungrysoulentity")
+            .sized(0.5f, 0.5f).build("hungrysoulentity")
     };
 
     fun register(eventBus: IEventBus) {

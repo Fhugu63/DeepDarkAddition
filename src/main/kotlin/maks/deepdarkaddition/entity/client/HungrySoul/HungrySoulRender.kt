@@ -21,12 +21,27 @@ class HungrySoulRender(pContext: EntityRendererProvider.Context) :
     override fun render(
         pEntity: HungrySoulEntity, pEntityYaw: Float, pPartialTicks: Float, pMatrixStack: PoseStack,
         pBuffer: MultiBufferSource, pPackedLight: Int
-    ) {
+    ) {/*
         if (pEntity.isBaby()) {
             pMatrixStack.scale(1f, 1f, 1f)
-        }
+        } else {
+            pMatrixStack.scale(2.5f, 2.5f, 2.5f)
+        }*/
 
+        pMatrixStack.scale(HungrySoulRender.scale, HungrySoulRender.scale, HungrySoulRender.scale)
 
         super.render(pEntity, pEntityYaw, pPartialTicks, pMatrixStack, pBuffer, pPackedLight)
+    }
+
+    companion object {
+        var scale = 1f
+            set(value) {
+                if (value <= 1F) {
+                    field = value
+                } else if (value >= 5F) {
+                    field = value
+                }
+            }
+
     }
 }

@@ -24,25 +24,11 @@ class DiaryWindow(title: Component, getedNumOfPart: Int): Screen(title) {
 
     var TextInDiary: String = "";
 
-    val Location = ResourceLocation.tryBuild(MainScript.MOD_ID, "textures/ui/texturefordiarywindow.png")
-
     val cs = CalculationScript()
 
     init {
-        var TextInDiary: String = when {
-            numOfPart == 1 -> "З-здравствуйте искатели, \n" +
-                    "я решил начать дневник\n" +
-                    "так как обнаружил какой-то\n" +
-                    "заброшенный город который\n" +
-                    "полностью окутон какой-то\n" +
-                    "чёрной, непонятной массой.\n" +
-                    "Спустя час после прошлой\n" +
-                    "записи, я понял что лучше...\n" +
-                    "Не шуметь... Если же вы ре-\n" +
-                    "шите издать громкий звук,\n" +
-                    "то из под земли выле-\n" +
-                    "зит какая-то сущность,\n" +
-                    "я решил назвать её «Варден»."
+        /*var TextInDiary: String = when {
+            numOfPart == 1 ->
             numOfPart == 2 -> "2"
             numOfPart == 3 -> "3"
             numOfPart == 4 -> "4"
@@ -51,7 +37,7 @@ class DiaryWindow(title: Component, getedNumOfPart: Int): Screen(title) {
                 "none"
             }
         }
-        this.TextInDiary = TextInDiary
+        this.TextInDiary = TextInDiary*/
     }
 
     lateinit var widgetText: MultiLineTextWidget
@@ -68,39 +54,43 @@ class DiaryWindow(title: Component, getedNumOfPart: Int): Screen(title) {
         heightOfBook = (((screen?.width ?: 1)/2)/1.5).toInt()
 
 
-
+        var Location = ResourceLocation.tryBuild(MainScript.MOD_ID, "textures/ui/texturefordiarywindow.png")
+        if (numOfPart == 1) {
+            Location = ResourceLocation.tryBuild(MainScript.MOD_ID, "textures/ui/texturefordiarypart1window.png")
+        }
+        val book = this.addRenderableWidget(ImageWidget(widthOfBook, heightOfBook, Location))
+        book.x = cs.calculateCenterOfScrennX(widthOfBook)
+        book.y = cs.calculateCenterOfScrennY(heightOfBook)
 
 
 
     }
 
     override fun render(graphics: GuiGraphics, pMouseX: Int, pMouseY: Int, pPartialTick: Float) {
-        val book = this.addRenderableWidget(ImageWidget(widthOfBook, heightOfBook, Location))
-        book.x = cs.calculateCenterOfScrennX(widthOfBook)
-        book.y = cs.calculateCenterOfScrennY(heightOfBook)
+
 
         //book.render(graphics, pMouseX, pMouseY, pPartialTick)
 
-        val screen: Screen? = Minecraft.getInstance().screen
-        val scaleX =  ((screen?.width ?: 1) / 2).toFloat()
-        val scaleY = scaleX*1.4F
+       // val screen: Screen? = Minecraft.getInstance().screen
+        //val scaleX =  ((screen?.width ?: 1) / 2).toFloat()
+        //val scaleY = scaleX*1.4F
         //graphics.draw(this.font, "sadfhaer atrhnaja teh", width/2, height/2, 15)
-        val multilineText = this.addRenderableWidget(MultiLineTextWidget(book.x+10, book.y+10, Component.translatable(TextInDiary), this.font))
+        //val multilineText = this.addRenderableWidget(MultiLineTextWidget(book.x+10, book.y+10, Component.translatable(TextInDiary), this.font))
         //multilineText.width = (screen?.width ?: 1) / 2
         //multilineText.height = book.height
 
-        MainScript.LOGGER.info(multilineText.width)
+        //MainScript.LOGGER.info(multilineText.width)
 
         //widgetText = this.addRenderableOnly(multilineText)
-        multilineText.setColor(0)
+        //multilineText.setColor(0)
         //graphics.fill(width/2-150, height/2-200, width/2+150, height/2+200, 0, -1000255255)
-        val pose: PoseStack = graphics.pose()
-        pose.pushPose()
+        //val pose: PoseStack = graphics.pose()
+        //pose.pushPose()
         //widgetText.render(graphics, pMouseX, pMouseY, pPartialTick)
 
-        pose.scale(scaleX, scaleY, 1.0F)
-        multilineText.render(graphics, pMouseX, pMouseY, pPartialTick)
-        pose.popPose()
+        //pose.scale(scaleX, scaleY, 1.0F)
+        //multilineText.render(graphics, pMouseX, pMouseY, pPartialTick)
+        //pose.popPose()
 
 
         //multilineText.width = ((screen?.width ?: 1)/4.5).toInt()
@@ -109,7 +99,7 @@ class DiaryWindow(title: Component, getedNumOfPart: Int): Screen(title) {
 
 
         //widgetText.render(graphics, pMouseX, pMouseY, pPartialTick)
-        this.renderBackground(graphics);
+        //this.renderBackground(graphics);
         //widgetText.width = (width/4.5).toInt()
         //widgetText.height = ((height/4/0.5)/2).toInt()
 
