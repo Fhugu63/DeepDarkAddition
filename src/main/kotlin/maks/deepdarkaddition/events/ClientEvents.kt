@@ -25,6 +25,6 @@ object ClientEvents {
     @SubscribeEvent
     fun registerLayerDefinitions(event: EntityRenderersEvent.RegisterLayerDefinitions) {
         event.registerLayerDefinition(ModModelLayers.HUNGRY_SOUL_LAYER, HungrySoulModel<Entity>::createBodyLayer)
-        event.registerLayerDefinition(ModModelLayers.SCULK_CREEPER_LAYER, SculkCreeperModel<Entity>::createBodyLayer)
+        //event.registerLayerDefinition(ModModelLayers.SCULK_CREEPER_LAYER, SculkCreeperModel<Entity>::createBodyLayer)
     }
 }
