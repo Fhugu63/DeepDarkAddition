@@ -1,13 +1,12 @@
 package maks.deepdarkaddition
 
+import com.mojang.realmsclient.dto.RealmsServer.WorldType
 import maks.deepdarkaddition.block.ModBlocks
 import maks.deepdarkaddition.entity.ModEntities
-import maks.deepdarkaddition.entity.custom.HungrySoulEntity
+import maks.deepdarkaddition.entity.client.luiza.HungrySoulRender
 import maks.deepdarkaddition.events.ModEvents
 import maks.deepdarkaddition.item.ModItems
-import maks.deepdarkaddition.entity.client.luiza.HungrySoulRender
 import net.minecraft.client.Minecraft
-import net.minecraft.client.main.GameConfig
 import net.minecraft.client.renderer.entity.EntityRenderers
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.Mod
@@ -76,6 +75,7 @@ class MainScript {
      */
     private fun onServerSetup(event: FMLDedicatedServerSetupEvent) {
         LOGGER.log(Level.INFO, "Server starting...")
+
     }
 
     private fun modEventHandler(event: RegisterEvent) {

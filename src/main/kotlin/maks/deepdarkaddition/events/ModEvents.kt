@@ -5,14 +5,21 @@ import maks.deepdarkaddition.MainScript
 import maks.deepdarkaddition.entity.ModEntities
 import maks.deepdarkaddition.entity.custom.HungrySoulEntity
 import net.minecraft.client.Minecraft
+import net.minecraft.data.worldgen.Structures
+import net.minecraft.resources.ResourceLocation
+import net.minecraft.tags.StructureTags
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityType
+import net.minecraft.world.level.block.SculkCatalystBlock
+import net.minecraft.world.level.levelgen.structure.Structure
+import net.minecraft.world.level.levelgen.structure.StructureType
 import net.minecraft.world.phys.Vec3
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent
 import net.minecraftforge.event.CommandEvent
 import net.minecraftforge.event.TickEvent
 import net.minecraftforge.event.entity.living.LivingDeathEvent
 import net.minecraftforge.event.entity.player.AttackEntityEvent
+import net.minecraftforge.event.level.ChunkDataEvent
 import net.minecraftforge.eventbus.api.SubscribeEvent
 import java.util.*
 import kotlin.math.abs
@@ -54,6 +61,8 @@ class ModEvents {
                 }
             }
         }
+
+        //logger.info(SculkCatalystBlock.)
     }
 
     @SubscribeEvent
@@ -86,12 +95,13 @@ class ModEvents {
                 player?.level()?.addFreshEntity(myEntity)
                 flagSpawnSoul = false
 
-                //minecraft.level.
-
                 numOfHungrySouls++
             }
         }
     }
+    val level = minecraft.level?.server?.getLevel(minecraft.level?.dimension())
+    //val test = level?.findNearestMapStructure(StructureTags., player?.onPos, 1000, false)
+    //val test = Anci
 
     @SubscribeEvent
     fun executedCommand(event: CommandEvent) {
@@ -101,5 +111,9 @@ class ModEvents {
 
     fun registerCaps(event: RegisterCapabilitiesEvent) {
         //event.register<IExampleCapability?>(IExampleCapability::class.java)
+    }
+
+    fun testing(event: ChunkDataEvent) {
+
     }
 }

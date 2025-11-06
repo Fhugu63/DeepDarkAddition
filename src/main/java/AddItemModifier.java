@@ -15,7 +15,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.function.Supplier;
 
 public class AddItemModifier extends LootModifier {
-    public static final Supplier<Codec<AddItemModifier>> CODEC = Suppliers.memoize(() -> RecordCodecBuilder.create(inst -> codecStart(inst).apply(inst, AddItemModifier::new)));
+    public static final Supplier<Codec<AddItemModifier>> CODEC =
+            Suppliers.memoize(() -> RecordCodecBuilder.create(inst -> codecStart(inst).apply(inst, AddItemModifier::new)));
 
     public AddItemModifier(LootItemCondition[] conditionsIn) {
         super(conditionsIn);

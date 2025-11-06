@@ -11,6 +11,7 @@ import net.minecraft.world.entity.ai.goal.FloatGoal
 import net.minecraft.world.entity.animal.Animal
 import net.minecraft.world.entity.monster.Ghast.RandomFloatAroundGoal
 import net.minecraft.world.level.Level
+import net.minecraft.world.level.levelgen.structure.placement.StructurePlacement
 
 class HungrySoulEntity(pEntityType: EntityType<out Animal>?, pLevel: Level?) : Animal(pEntityType, pLevel) {
     private fun setupAnimationStates() {
@@ -44,6 +45,5 @@ class HungrySoulEntity(pEntityType: EntityType<out Animal>?, pLevel: Level?) : A
                 .add(Attributes.FOLLOW_RANGE, 1.0)
         }
 
-        val test = ""
     }
 }
