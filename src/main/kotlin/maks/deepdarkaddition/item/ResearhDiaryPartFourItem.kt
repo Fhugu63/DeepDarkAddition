@@ -10,13 +10,12 @@ import net.minecraft.world.level.Level
 import net.minecraft.network.chat.Component
 import net.minecraft.client.Minecraft
 
-class ResearhDiaryPartOneItem(settings: Properties) : Item(settings) {
-    var flag: Boolean = false
-    val diaryWindow: DiaryWindow = DiaryWindow(Component.translatable("test"), 1)
+class ResearhDiaryPartFourItem(settings: Properties) : Item(settings) {
+    public var flag: Boolean = false
+    val diaryWindow: DiaryWindow = DiaryWindow(Component.translatable("test"), 4)
 
     override fun use(pLevel: Level, pPlayer: Player, pUsedHand: InteractionHand): InteractionResultHolder<ItemStack> {
         if (!flag) {
-            diaryWindow.numOfPart = 1
             Minecraft.getInstance().setScreen(diaryWindow)
 
             flag = !flag

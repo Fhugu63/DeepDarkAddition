@@ -57,6 +57,8 @@ class DiaryWindow(title: Component, getedNumOfPart: Int): Screen(title) {
         var Location = ResourceLocation.tryBuild(MainScript.MOD_ID, "textures/ui/texturefordiarywindow.png")
         if (numOfPart == 1) {
             Location = ResourceLocation.tryBuild(MainScript.MOD_ID, "textures/ui/texturefordiarypart1window.png")
+        } else if (numOfPart == 2) {
+            Location = ResourceLocation.tryBuild(MainScript.MOD_ID, "textures/ui/texturefordiarypart2window.png")
         }
         val book = this.addRenderableWidget(ImageWidget(widthOfBook, heightOfBook, Location))
         book.x = cs.calculateCenterOfScrennX(widthOfBook)
@@ -108,6 +110,7 @@ class DiaryWindow(title: Component, getedNumOfPart: Int): Screen(title) {
 
     override fun removed() {
         ModItems().RESEARHDIARYPARTONE().flag = false
+        ModItems().RESEARHDIARYPARTTWO().flag = false
         super.removed()
     }
 }
