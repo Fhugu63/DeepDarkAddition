@@ -11,11 +11,12 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider
 import net.minecraft.client.renderer.entity.MobRenderer
 import net.minecraft.resources.ResourceLocation
 
-class SculkCreeperRenderer(pContext: EntityRendererProvider.Context) : MobRenderer<SculkCreeperEntity, SculkCreeperModel<SculkCreeperEntity>>(
-    pContext,
+class SculkCreeperRenderer(pContext: EntityRendererProvider.Context) :
+    MobRenderer<SculkCreeperEntity, SculkCreeperModel<SculkCreeperEntity>>(pContext,
     SculkCreeperModel(pContext.bakeLayer(ModModelLayers.SCULK_CREEPER_LAYER)), 0.5f) {
-    override fun getTextureLocation(p0: SculkCreeperEntity): ResourceLocation? {
-        return ResourceLocation.tryBuild(MainScript.MOD_ID, "textures/entity/sculkcreeper.png")
+
+    override fun getTextureLocation(p0: SculkCreeperEntity): ResourceLocation {
+        return ResourceLocation.fromNamespaceAndPath(MainScript.MOD_ID, "textures/entity/sculkcreeper.png")
     }
 
     override fun render(

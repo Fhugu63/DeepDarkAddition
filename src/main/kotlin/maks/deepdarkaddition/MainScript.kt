@@ -3,6 +3,7 @@ package maks.deepdarkaddition
 import com.mojang.realmsclient.dto.RealmsServer.WorldType
 import maks.deepdarkaddition.block.ModBlocks
 import maks.deepdarkaddition.entity.ModEntities
+import maks.deepdarkaddition.entity.client.SculkCreeper.SculkCreeperRenderer
 import maks.deepdarkaddition.entity.client.luiza.HungrySoulRender
 import maks.deepdarkaddition.events.ModEvents
 import maks.deepdarkaddition.item.ModItems
@@ -68,6 +69,7 @@ class MainScript {
     private fun onClientSetup(event: FMLClientSetupEvent) {
         LOGGER.log(Level.INFO, "Initializing client...")
         EntityRenderers.register(ModEntities.HUNGRYSOULENTITY.get(), ::HungrySoulRender)
+        EntityRenderers.register(ModEntities.SCULKCREEPERENTITY.get(), ::SculkCreeperRenderer)
     }
 
     /**

@@ -14,6 +14,6 @@ object ModEventBusEvents {
     @SubscribeEvent
     fun registerAttributes(event: EntityAttributeCreationEvent) {
         event.put(ModEntities.HUNGRYSOULENTITY.get(), HungrySoulEntity.createAttributes().build())
-        //event.put(ModEntities.SCULKCREEPERENTITY.get(), SculkCreeperEntity.createAttributes().build())
+        event.put(ModEntities.SCULKCREEPERENTITY.get(), SculkCreeperEntity.createAttributes().build())
     }
 }
