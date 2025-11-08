@@ -7,8 +7,10 @@ import maks.deepdarkaddition.entity.client.SculkCreeper.SculkCreeperRenderer
 import maks.deepdarkaddition.entity.client.luiza.HungrySoulRender
 import maks.deepdarkaddition.events.ModEvents
 import maks.deepdarkaddition.item.ModItems
+import maks.deepdarkaddition.mixins.MixinWarden
 import net.minecraft.client.Minecraft
 import net.minecraft.client.renderer.entity.EntityRenderers
+import net.minecraft.world.entity.monster.warden.Warden
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
