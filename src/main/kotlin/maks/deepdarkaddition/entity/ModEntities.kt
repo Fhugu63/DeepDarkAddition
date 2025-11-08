@@ -18,13 +18,13 @@ object ModEntities {
         DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MainScript.MOD_ID)
 
 
-    val HUNGRYSOULENTITY = ENTITY_TYPES.register("hungrysoulentity") {
+    @JvmField val HUNGRYSOULENTITY = ENTITY_TYPES.register("hungrysoulentity") {
         EntityType.Builder.of(::HungrySoulEntity, MobCategory.CREATURE
         )
             .sized(0.5f, 0.5f).build("hungrysoulentity")
     }
 
-    val SCULKCREEPERENTITY = ENTITY_TYPES.register("sculkcreeperentity") {
+    @JvmField val SCULKCREEPERENTITY = ENTITY_TYPES.register("sculkcreeperentity") {
         EntityType.Builder.of(::SculkCreeperEntity, MobCategory.CREATURE
         )
             .sized(1f, 1.8f).build("sculkcreeperentity")
