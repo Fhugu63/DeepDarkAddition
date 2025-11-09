@@ -8,7 +8,7 @@ import net.minecraftforge.common.capabilities.AutoRegisterCapability
 interface IHungrySouls {
     var ownerOfSoul: MutableMap<HungrySoulEntity?, Entity>
 
-    fun getSouls(): MutableMap<HungrySoulEntity?, Entity>
+    fun getSouls(): MutableMap<HungrySoulEntity?, Entity>?
 
     fun getPlayerBySoul(keySoul: HungrySoulEntity?): Entity?
 

@@ -44,6 +44,8 @@ class ModEvents() : IHungrySouls, ICapabilityProvider {
 
     //override var ownerOfSoul = ihungrySouls.resolve().get().ownerOfSoul
 
+    //lateinit var myentity: HungrySoulEntity
+
     override lateinit var ownerOfSoul: MutableMap<HungrySoulEntity?, Entity>
 
     @Suppress("OVERRIDE_BY_INLINE")
@@ -59,32 +61,38 @@ class ModEvents() : IHungrySouls, ICapabilityProvider {
 
     //Инициализация методов интерфейса
     override fun getSouls(): MutableMap<HungrySoulEntity?, Entity> {
-        var i = ownerOfSoul
+        var i: MutableMap<HungrySoulEntity?, Entity> = ownerOfSoul
         provider.addListener { cap -> i = ownerOfSoul }
+
         return i
     }
 
     override fun getPlayerBySoul(keySoul: HungrySoulEntity?): Entity? {
-        return ownerOfSoul.get(keySoul)
+        var i: Entity? = null
+        provider.addListener { cap -> i = ownerOfSoul?.get(keySoul) }
+
+        return i
     }
 
     override fun addSoul(
         soulEntity: HungrySoulEntity?,
         pEntity: Entity
     ) {
-        ownerOfSoul.put(soulEntity, pEntity)
+        provider.addListener { cap -> ownerOfSoul.put(soulEntity, pEntity) }
     }
 
     override fun removeSoul(removebleSoul: HungrySoulEntity) {
-        ownerOfSoul.remove(removebleSoul)
+        provider.addListener { cap -> ownerOfSoul?.remove(removebleSoul) }
     }
 
 
     //Метод срабатывающий каждый тик
     @SubscribeEvent
     fun onTickUpdate(event: TickEvent) {
-        if (ownerOfSoul != null) {
-            ownerOfSoul.forEach { (key, value) ->
+        var oOS: MutableMap<HungrySoulEntity?, Entity> = ownerOfSoul
+        provider.addListener { cop -> oOS = getSouls() }
+        if (!oOS.isEmpty()) {
+            oOS.forEach { (key, value) ->
                 val entity = key
                 val playerEntity = value
 
@@ -100,9 +108,9 @@ class ModEvents() : IHungrySouls, ICapabilityProvider {
                     }
                 }
             }
-        } else {
-            ModEvents().getCapability(OwnerOfHungrySoulCapability().OWNEROFSOUL_HANDLER, null).ifPresent { cap -> ModEvents().ownerOfSoul = cap.getSouls() }
-        }
+        } //else {
+            //ModEvents().getCapability(OwnerOfHungrySoulCapability().OWNEROFSOUL_HANDLER, null).ifPresent { cap -> ModEvents().ownerOfSoul = cap.getSouls() }
+        //}
 
         //logger.info(SculkCatalystBlock.)
     }
@@ -121,6 +129,7 @@ class ModEvents() : IHungrySouls, ICapabilityProvider {
     @SubscribeEvent
     fun spawnEntityWhenMobDie(event: LivingDeathEvent) {
         val entity = event.entity
+
         if (flagSpawnSoul) {
             if (entity.type == EntityType.WARDEN) {
                 MainScript.LOGGER.info("warden is died")
@@ -128,13 +137,11 @@ class ModEvents() : IHungrySouls, ICapabilityProvider {
                 val myEntity = ModEntities.HUNGRYSOULENTITY.get().create(player?.level())
                 myEntity?.moveTo(entity.x, entity.y+2, entity.z)
                 myEntity?.isNoGravity = true
-
                 //addSoul(myEntity, event.source.entity as Entity)
                 val sourceDamage = event.source.entity
                 if (sourceDamage != null) {
-                    provider.ifPresent { cap -> cap.addSoul(myEntity, sourceDamage); }
+                    addSoul(myEntity, sourceDamage)
                     logger.info(ownerOfSoul.toString())
-                    invalidate()
                 }
 
                 player?.inventory?.add(ModItems().RESEARHDIARYPARTONE.get().defaultInstance)

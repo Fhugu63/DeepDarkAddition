@@ -70,6 +70,8 @@ class MainScript {
         LOGGER.log(Level.INFO, "Initializing client...")
         EntityRenderers.register(ModEntities.HUNGRYSOULENTITY.get(), ::HungrySoulRender)
         EntityRenderers.register(ModEntities.SCULKCREEPERENTITY.get(), ::SculkCreeperRenderer)
+
+        //ModEvents().provider.ifPresent { cap -> ModEvents().ownerOfSoul = cap.getSouls()!! }
     }
 
     /**
