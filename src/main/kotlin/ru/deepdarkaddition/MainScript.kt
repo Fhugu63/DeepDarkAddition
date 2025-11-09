@@ -71,7 +71,7 @@ class MainScript {
         EntityRenderers.register(ModEntities.HUNGRYSOULENTITY.get(), ::HungrySoulRender)
         EntityRenderers.register(ModEntities.SCULKCREEPERENTITY.get(), ::SculkCreeperRenderer)
 
-        //ModEvents().provider.ifPresent { cap -> ModEvents().ownerOfSoul = cap.getSouls()!! }
+        ModEvents().provider.ifPresent { cap -> ModEvents().ownerOfSoul = cap.getSouls()!! }
     }
 
     /**
