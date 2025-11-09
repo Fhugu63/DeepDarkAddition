@@ -1,5 +1,5 @@
 import com.mojang.serialization.Codec;
-import maks.deepdarkaddition.MainScript;
+import ru.deepdarkaddition.MainScript;
 import net.minecraftforge.common.loot.IGlobalLootModifier;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
