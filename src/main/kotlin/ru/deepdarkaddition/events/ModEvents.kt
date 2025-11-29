@@ -1,19 +1,20 @@
 package ru.deepdarkaddition.events
 
-import ru.deepdarkaddition.CalculationScript
-import ru.deepdarkaddition.DataSavers.OwnerOfHungrySoulCapability
+import ru.deepdarkaddition.engine.CalculationScript
 import ru.deepdarkaddition.MainScript
 import ru.deepdarkaddition.entity.ModEntities
 import ru.deepdarkaddition.entity.custom.HungrySoulEntity
 import ru.deepdarkaddition.interfaces.IHungrySouls
-import ru.deepdarkaddition.item.ModItems
 import net.minecraft.client.Minecraft
-import net.minecraft.core.Direction
+import net.minecraft.nbt.CompoundTag
+import net.minecraft.nbt.NbtIo
+import net.minecraft.nbt.NbtUtils
+import net.minecraft.nbt.Tag
+import net.minecraft.network.chat.contents.NbtContents
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityType
+import net.minecraft.world.level.storage.loot.providers.nbt.NbtProvider
 import net.minecraft.world.phys.Vec3
-import net.minecraftforge.common.capabilities.Capability
-import net.minecraftforge.common.capabilities.ICapabilityProvider
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent
 import net.minecraftforge.common.util.LazyOptional
 import net.minecraftforge.event.CommandEvent
@@ -23,10 +24,12 @@ import net.minecraftforge.event.entity.player.AttackEntityEvent
 import net.minecraftforge.event.level.ChunkDataEvent
 import net.minecraftforge.eventbus.api.SubscribeEvent
 import java.util.*
+import ru.deepdarkaddition.engine.Methods
+import java.awt.Component
 import kotlin.math.abs
 
 
-class ModEvents() : IHungrySouls, ICapabilityProvider {
+class ModEvents() : IHungrySouls {
     val minecraft = Minecraft.getInstance()
 
     var player = minecraft.level?.getPlayerByUUID(UUID.fromString(""))
@@ -46,41 +49,38 @@ class ModEvents() : IHungrySouls, ICapabilityProvider {
 
     override var ownerOfSoul: MutableMap<HungrySoulEntity?, Entity> = mutableMapOf<HungrySoulEntity?, Entity>()
 
+    var movedTime = 0
+/*
     @Suppress("OVERRIDE_BY_INLINE")
     override fun <T> getCapability(cap: Capability<T>, side: Direction?): LazyOptional<T> {
         return OwnerOfHungrySoulCapability().OWNEROFSOUL_HANDLER.orEmpty(cap, ihungrySouls)
     }
-/*
+
     fun invalidate() {
         ihungrySouls.invalidate()
-    }*/
+    }
 
-    val provider = this.getCapability(OwnerOfHungrySoulCapability().OWNEROFSOUL_HANDLER, null)
+    val provider = this.getCapability(OwnerOfHungrySoulCapability().OWNEROFSOUL_HANDLER, null)*/
 
     //Инициализация методов интерфейса
     override fun getSouls(): MutableMap<HungrySoulEntity?, Entity> {
-        var i: MutableMap<HungrySoulEntity?, Entity> = ownerOfSoul
-        provider.addListener { cap -> i = ownerOfSoul }
-
-        return i
+        return ownerOfSoul
     }
 
     override fun getPlayerBySoul(keySoul: HungrySoulEntity?): Entity? {
-        var i: Entity? = null
-        provider.addListener { cap -> i = ownerOfSoul?.get(keySoul) }
+        return ownerOfSoul.get(keySoul)
 
-        return i
     }
 
     override fun addSoul(
         soulEntity: HungrySoulEntity?,
         pEntity: Entity
     ) {
-        provider.addListener { cap -> ModEvents().ownerOfSoul.put(soulEntity, pEntity) }
+        ownerOfSoul.put(soulEntity, pEntity)
     }
 
     override fun removeSoul(removebleSoul: HungrySoulEntity) {
-        provider.addListener { cap -> ownerOfSoul?.remove(removebleSoul) }
+        ownerOfSoul.remove(removebleSoul)
     }
 
 
@@ -89,28 +89,33 @@ class ModEvents() : IHungrySouls, ICapabilityProvider {
     fun onTickUpdate(event: TickEvent) {
         if (!getSouls().isEmpty()) {
             getSouls().forEach { (key, value) ->
-                val entity = key
+                val hungrySoul = key
                 val playerEntity = value
 
-                if (entity != null) {
-                    val raznicaInPosition = cs.raznicaInPos(playerEntity.position(), entity.position())
-
+                if (hungrySoul != null) {
+                    val raznicaInPosition = cs.raznicaInPos(playerEntity.position(), hungrySoul.position())
                     if (abs(raznicaInPosition.x) > 2 || abs(raznicaInPosition.y) > 2 || abs(raznicaInPosition.z) > 2) {
-                        entity.moveTo(Vec3(
-                            if (raznicaInPosition.x>1) {entity.x+0.1} else if (raznicaInPosition.x<1&&raznicaInPosition.x>-1) {entity.x} else {entity.x-0.1},
-                            if (raznicaInPosition.y>1) {entity.y+0.1} else if (raznicaInPosition.y<1&&raznicaInPosition.y>-1) {entity.y} else {entity.y-0.1},
-                            if (raznicaInPosition.z>1) {entity.z+0.1} else if (raznicaInPosition.z<1&&raznicaInPosition.z>-1) {entity.z} else {entity.z-0.1}
-                        ))
+
+                        movedTime += 1
+
+
+
+                        Methods().smoothMovement(hungrySoul, playerEntity)
                     }
+                    val nbt = CompoundTag()
+                    hungrySoul.saveWithoutId(nbt)
+
+                    logger.info(nbt)
+                    //entity.tag
+                } else {
+                    movedTime = 0
                 }
             }
-        } //else {
-        //ModEvents().getCapability(OwnerOfHungrySoulCapability().OWNEROFSOUL_HANDLER, null).ifPresent { cap -> ModEvents().ownerOfSoul = cap.getSouls() }
-        //}
+        }
 
         //logger.info(SculkCatalystBlock.)
     }
-    //Метод срабатывающий когда игрок бъёт по энтити
+
     @SubscribeEvent
     fun attackEntity(event: AttackEntityEvent) {
         val entity = event.target
@@ -121,32 +126,41 @@ class ModEvents() : IHungrySouls, ICapabilityProvider {
 
         flagSpawnSoul = true
     }
-    //Метод срабатывающий когда живая сущность умерла
-    @SubscribeEvent
-    fun spawnEntityWhenMobDie(event: LivingDeathEvent) {
-        val entity = event.entity
 
+    @SubscribeEvent
+    fun dropItemFromEntity(event: LivingDeathEvent) {
+        val entity = event.entity
         if (flagSpawnSoul) {
             if (entity.type == EntityType.WARDEN) {
                 MainScript.LOGGER.info("warden is died")
 
-                val myEntity = ModEntities.HUNGRYSOULENTITY.get().create(player?.level())
-                myEntity?.moveTo(entity.x, entity.y+2, entity.z)
-                myEntity?.isNoGravity = true
-                //addSoul(myEntity, event.source.entity as Entity)
-                val sourceDamage = event.source.entity
-                if (sourceDamage != null) {
-                    addSoul(myEntity, sourceDamage)
-
-                    logger.info(ownerOfSoul.toString())
-                    logger.info(getSouls())
+                val hungrySoul = ModEntities.HUNGRYSOULENTITY.get().create(player?.level())!!
+                hungrySoul.moveTo(entity.x, entity.y+2, entity.z)
+                hungrySoul.isNoGravity = true
+                hungrySoul.numOfEatenSouls = 5
+                //hungrySoul?.setDeltaMovement(entity.deltaMovement.add(100.2,100.0,100.0))
+                //namesOfHungrySouls += "hungrysoul${numOfHungrySouls}"
+                val entity = event.source.entity
+                if (entity != null) {
+                    addSoul(hungrySoul, entity)
                 }
-
-                player?.inventory?.add(ModItems().RESEARHDIARYPARTONE.get().defaultInstance)
 
                 logger.info(event.source.entity?.name.toString())
 
-                player?.level()?.addFreshEntity(myEntity)
+                player?.sendSystemMessage(net.minecraft.network.chat.Component.translatable("[голодная душа] ты меня освободил, теперь накорми меня живыми существами и возможно и я исполню твоё желание"))
+
+                //val tag = CompoundTag()
+                //tag.putInt()
+                val nbt = CompoundTag()
+                hungrySoul.saveWithoutId(nbt)
+
+                nbt.putInt("numOfEatenSouls", 5)
+
+                hungrySoul.load(nbt)
+
+                logger.info(hungrySoul.loadAdditional(CompoundTag()))
+
+                player?.level()?.addFreshEntity(hungrySoul)
                 flagSpawnSoul = false
 
                 numOfHungrySouls++

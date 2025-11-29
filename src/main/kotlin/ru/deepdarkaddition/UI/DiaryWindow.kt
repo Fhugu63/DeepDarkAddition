@@ -1,6 +1,6 @@
 package ru.deepdarkaddition.UI
 
-import ru.deepdarkaddition.CalculationScript
+import ru.deepdarkaddition.engine.CalculationScript
 import ru.deepdarkaddition.MainScript
 import ru.deepdarkaddition.item.ModItems
 import net.minecraft.client.Minecraft

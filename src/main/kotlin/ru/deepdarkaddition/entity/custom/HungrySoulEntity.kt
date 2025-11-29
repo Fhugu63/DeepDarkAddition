@@ -1,5 +1,6 @@
 package ru.deepdarkaddition.entity.custom
 
+import net.minecraft.nbt.CompoundTag
 import ru.deepdarkaddition.entity.ModEntities
 import net.minecraft.server.level.ServerLevel
 import net.minecraft.world.entity.AgeableMob
@@ -15,6 +16,19 @@ class HungrySoulEntity(pEntityType: EntityType<out Animal>?, pLevel: Level?) : A
     private fun setupAnimationStates() {
 
     }
+
+    var numOfEatenSouls = 0
+
+    fun saveAdditional(nbt: CompoundTag) {
+        this.saveAdditional(nbt)
+        nbt.putInt("numOfEatenSouls", numOfEatenSouls) // Сохраняем своё значение
+    }
+
+    fun loadAdditional(nbt: CompoundTag): Int {
+        numOfEatenSouls = nbt.getInt("numOfEatenSouls") // Читаем своё значение
+        return numOfEatenSouls
+    }
+
 
 
     /*
@@ -32,7 +46,7 @@ class HungrySoulEntity(pEntityType: EntityType<out Animal>?, pLevel: Level?) : A
     override fun getBreedOffspring(pLevel: ServerLevel, pOtherParent: AgeableMob): HungrySoulEntity? {
         return ModEntities.HUNGRYSOULENTITY.get().create(pLevel)
     }
-    
+
     companion object {
         fun createAttributes(): AttributeSupplier.Builder {
             return createLivingAttributes()

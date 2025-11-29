@@ -1,4 +1,4 @@
-package ru.deepdarkaddition
+package ru.deepdarkaddition.engine
 
 import net.minecraft.client.Minecraft
 import net.minecraft.world.phys.Vec3
@@ -18,7 +18,7 @@ class CalculationScript {
 
     fun raznicaInPos(pos1: Vec3, pos2: Vec3): Vec3 {
         //val newPos = Vec3(abs(pos1.x - pos2.x), abs(pos1.y - pos2.y), abs(pos1.z - pos2.z))
-        val newPos = Vec3(pos1.x-pos2.x, pos1.y-pos2.y, pos1.z-pos2.z)
+        val newPos = Vec3(pos1.x - pos2.x, pos1.y - pos2.y, pos1.z - pos2.z)
 
         return newPos
     }
