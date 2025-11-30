@@ -1,14 +1,9 @@
 package ru.deepdarkaddition
 
-import ru.deepdarkaddition.block.ModBlocks
-import ru.deepdarkaddition.entity.ModEntities
-import ru.deepdarkaddition.entity.client.SculkCreeper.SculkCreeperRenderer
-import ru.deepdarkaddition.entity.client.luiza.HungrySoulRender
-import ru.deepdarkaddition.events.ModEvents
-import ru.deepdarkaddition.item.ModItems
 import net.minecraft.client.Minecraft
 import net.minecraft.client.renderer.entity.EntityRenderers
 import net.minecraftforge.common.MinecraftForge
+import net.minecraftforge.eventbus.api.EventPriority
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
 import net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent
@@ -16,7 +11,13 @@ import net.minecraftforge.registries.RegisterEvent
 import org.apache.logging.log4j.Level
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
-import ru.deepdarkaddition.DataSavers.OwnerOfHungrySoulCapability
+import ru.deepdarkaddition.block.ModBlocks
+import ru.deepdarkaddition.entity.ModEntities
+import ru.deepdarkaddition.entity.client.SculkCreeper.SculkCreeperRenderer
+import ru.deepdarkaddition.entity.client.luiza.HungrySoulRender
+import ru.deepdarkaddition.entity.custom.SculkCreeperEntity
+import ru.deepdarkaddition.events.ModEvents
+import ru.deepdarkaddition.item.ModItems
 import thedarkcolour.kotlinforforge.forge.MOD_BUS
 import thedarkcolour.kotlinforforge.forge.runForDist
 

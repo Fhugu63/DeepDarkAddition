@@ -1,12 +1,16 @@
 package ru.deepdarkaddition.events
 
+import net.minecraft.world.phys.AABB
+import net.minecraft.world.phys.Vec3
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent
+import net.minecraftforge.event.entity.player.PlayerInteractEvent
+import net.minecraftforge.eventbus.api.SubscribeEvent
+import net.minecraftforge.fml.common.Mod
 import ru.deepdarkaddition.MainScript
 import ru.deepdarkaddition.entity.ModEntities
 import ru.deepdarkaddition.entity.custom.HungrySoulEntity
 import ru.deepdarkaddition.entity.custom.SculkCreeperEntity
-import net.minecraftforge.event.entity.EntityAttributeCreationEvent
-import net.minecraftforge.eventbus.api.SubscribeEvent
-import net.minecraftforge.fml.common.Mod
+import thedarkcolour.kotlinforforge.forge.vectorutil.v3d.toVec3
 
 
 @Mod.EventBusSubscriber(modid = MainScript.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)

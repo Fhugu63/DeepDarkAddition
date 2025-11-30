@@ -7,13 +7,9 @@ import ru.deepdarkaddition.entity.custom.HungrySoulEntity
 import ru.deepdarkaddition.interfaces.IHungrySouls
 import net.minecraft.client.Minecraft
 import net.minecraft.nbt.CompoundTag
-import net.minecraft.nbt.NbtIo
-import net.minecraft.nbt.NbtUtils
-import net.minecraft.nbt.Tag
-import net.minecraft.network.chat.contents.NbtContents
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityType
-import net.minecraft.world.level.storage.loot.providers.nbt.NbtProvider
+import net.minecraft.world.phys.AABB
 import net.minecraft.world.phys.Vec3
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent
 import net.minecraftforge.common.util.LazyOptional
@@ -21,11 +17,15 @@ import net.minecraftforge.event.CommandEvent
 import net.minecraftforge.event.TickEvent
 import net.minecraftforge.event.entity.living.LivingDeathEvent
 import net.minecraftforge.event.entity.player.AttackEntityEvent
+import net.minecraftforge.event.entity.player.PlayerInteractEvent
+import net.minecraftforge.event.level.BlockEvent
 import net.minecraftforge.event.level.ChunkDataEvent
 import net.minecraftforge.eventbus.api.SubscribeEvent
+import ru.deepdarkaddition.engine.AnnotationProcessor
 import java.util.*
 import ru.deepdarkaddition.engine.Methods
-import java.awt.Component
+import ru.deepdarkaddition.entity.custom.SculkCreeperEntity
+import thedarkcolour.kotlinforforge.forge.vectorutil.v3d.toVec3
 import kotlin.math.abs
 
 
@@ -146,7 +146,7 @@ class ModEvents() : IHungrySouls {
                 }
 
                 logger.info(event.source.entity?.name.toString())
-
+                player?.level()?.addFreshEntity(hungrySoul)
                 player?.sendSystemMessage(net.minecraft.network.chat.Component.translatable("[голодная душа] ты меня освободил, теперь накорми меня живыми существами и возможно и я исполню твоё желание"))
 
                 //val tag = CompoundTag()
@@ -160,7 +160,7 @@ class ModEvents() : IHungrySouls {
 
                 logger.info(hungrySoul.loadAdditional(CompoundTag()))
 
-                player?.level()?.addFreshEntity(hungrySoul)
+
                 flagSpawnSoul = false
 
                 numOfHungrySouls++
@@ -176,6 +176,18 @@ class ModEvents() : IHungrySouls {
     fun executedCommand(event: CommandEvent) {
         //logger.info(event.listenerList)
         //HungrySoulRender.scale = 5f
+    }
+
+    @SubscribeEvent
+    fun playerTick(event: TickEvent.PlayerTickEvent) {
+        val player = event.player
+    }
+
+    @SubscribeEvent
+    fun onPlaceBlock(event: BlockEvent.EntityPlaceEvent) {
+        val pos: Vec3 = event.pos.toVec3()
+        val sculkCreepers: List<SculkCreeperEntity> = event.entity?.level()!!.getEntitiesOfClass(SculkCreeperEntity::class.java, AABB.ofSize(pos, 8.0, 8.0, 8.0))
+        sculkCreepers.forEach { sculkCreeperEntity -> sculkCreeperEntity.soundVibration(event.entity) }
     }
 
     fun registerCaps(event: RegisterCapabilitiesEvent) {

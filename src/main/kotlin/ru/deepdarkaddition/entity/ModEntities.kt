@@ -22,8 +22,7 @@ object ModEntities {
     }
 
     @JvmField val SCULKCREEPERENTITY = ENTITY_TYPES.register("sculkcreeperentity") {
-        EntityType.Builder.of(::SculkCreeperEntity, MobCategory.CREATURE
-        )
+        EntityType.Builder.of(::SculkCreeperEntity, MobCategory.MONSTER)
             .sized(1f, 1.8f).build("sculkcreeperentity")
     }
 
