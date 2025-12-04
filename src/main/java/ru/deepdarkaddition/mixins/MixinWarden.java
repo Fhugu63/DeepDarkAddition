@@ -2,7 +2,11 @@ package ru.deepdarkaddition.mixins;
 
 import net.minecraft.world.entity.EntitySelector;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.level.gameevent.vibrations.VibrationSystem;
 import org.jetbrains.annotations.Contract;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import ru.deepdarkaddition.entity.ModEntities;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.Entity;
@@ -17,33 +21,17 @@ import org.spongepowered.asm.mixin.Overwrite;
 import javax.annotation.Nullable;
 
 @Mixin(Warden.class)
-public abstract class MixinWarden extends Monster {
-    protected MixinWarden(EntityType<? extends Monster> pEntityType, Level pLevel) {
-        super(pEntityType, pLevel);
-    }
+public abstract class MixinWarden implements VibrationSystem {
 
-    @Overwrite
-    public boolean canRide(Entity pVehicle) {
-        System.out.println("dda:It work!");
-        return true;
-    }
-
-    @Overwrite
+    @Inject(method = "canTargetEntity", at = @At("HEAD"), cancellable = true)
     @Contract("null->false")
-    public boolean canTargetEntity(@Nullable Entity p_219386_) {
-        boolean var10000;
-        if (p_219386_ instanceof LivingEntity $$1) {
-            if (this.level() == p_219386_.level() && EntitySelector.NO_CREATIVE_OR_SPECTATOR.test(p_219386_) && !this.isAlliedTo(p_219386_) &&
-                    $$1.getType() != EntityType.ARMOR_STAND && $$1.getType() != EntityType.WARDEN && !$$1.isInvulnerable() &&
-                    !$$1.isDeadOrDying() && this.level().getWorldBorder().isWithinBounds($$1.getBoundingBox()) &&
-                    $$1.getType() != ModEntities.SCULKCREEPERENTITY.get() && $$1.getType() != ModEntities.HUNGRYSOULENTITY.get()) {
-
-                var10000 = true;
-                return var10000;
-            }
+    private void canTargetEntity(@Nullable Entity entity, CallbackInfoReturnable<Boolean> cir) {
+        Boolean returnValue = false;
+        if (entity.getType() == ModEntities.HUNGRYSOULENTITY.get() || entity.getType() == ModEntities.SCULKCREEPERENTITY.get()) {
+            returnValue = true;
         }
+        cir.setReturnValue(returnValue);
 
-        var10000 = false;
-        return var10000;
+        cir.cancel();
     }
 }

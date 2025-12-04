@@ -12,18 +12,18 @@ import net.minecraft.world.phys.Vec3
 class Methods {
     val cs = CalculationScript()
 
-    fun smoothMovement(entity: Entity, playerEntity: Entity) {
+    fun smoothMovement(entity: Entity, playerEntity: Entity, speed: Float) {
         val raznicaInPosition = cs.raznicaInPos(playerEntity.position(), entity.position())
         
         entity.moveTo(Vec3(
-            if (raznicaInPosition.x>1) {(entity.x+0.1)}
-                else if (raznicaInPosition.x<1&&raznicaInPosition.x>-1) {entity.x} else {(entity.x-0.1)},
+            if (raznicaInPosition.x>1) {(entity.x+speed)}
+                else if (raznicaInPosition.x<1&&raznicaInPosition.x>-1) {entity.x} else {(entity.x-speed)},
 
-            if (raznicaInPosition.y>1) {(entity.y+0.1)}
-                else if (raznicaInPosition.y<1&&raznicaInPosition.y>-1) {entity.y} else {(entity.y-0.1)},
+            if (raznicaInPosition.y>1) {(entity.y+speed)}
+                else if (raznicaInPosition.y<1&&raznicaInPosition.y>-1) {entity.y} else {(entity.y-speed)},
 
-            if (raznicaInPosition.z>1) {(entity.z+0.1)}
-                else if (raznicaInPosition.z<1&&raznicaInPosition.z>-1) {entity.z} else {(entity.z-0.1)}
+            if (raznicaInPosition.z>1) {(entity.z+speed)}
+                else if (raznicaInPosition.z<1&&raznicaInPosition.z>-1) {entity.z} else {(entity.z-speed)}
         ))
     }
 }

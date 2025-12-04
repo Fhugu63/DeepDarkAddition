@@ -6,6 +6,7 @@ import ru.deepdarkaddition.entity.ModEntities
 import ru.deepdarkaddition.entity.custom.HungrySoulEntity
 import ru.deepdarkaddition.interfaces.IHungrySouls
 import net.minecraft.client.Minecraft
+import net.minecraft.core.BlockPos
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityType
@@ -15,6 +16,7 @@ import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent
 import net.minecraftforge.common.util.LazyOptional
 import net.minecraftforge.event.CommandEvent
 import net.minecraftforge.event.TickEvent
+import net.minecraftforge.event.entity.EntityEvent
 import net.minecraftforge.event.entity.living.LivingDeathEvent
 import net.minecraftforge.event.entity.player.AttackEntityEvent
 import net.minecraftforge.event.entity.player.PlayerInteractEvent
@@ -25,12 +27,11 @@ import ru.deepdarkaddition.engine.AnnotationProcessor
 import java.util.*
 import ru.deepdarkaddition.engine.Methods
 import ru.deepdarkaddition.entity.custom.SculkCreeperEntity
-import thedarkcolour.kotlinforforge.forge.vectorutil.v3d.toVec3
 import kotlin.math.abs
 
 
 class ModEvents() : IHungrySouls {
-    val minecraft = Minecraft.getInstance()
+    var minecraft: Minecraft = Minecraft.getInstance()
 
     var player = minecraft.level?.getPlayerByUUID(UUID.fromString(""))
 
@@ -61,6 +62,7 @@ class ModEvents() : IHungrySouls {
     }
 
     val provider = this.getCapability(OwnerOfHungrySoulCapability().OWNEROFSOUL_HANDLER, null)*/
+
 
     //Инициализация методов интерфейса
     override fun getSouls(): MutableMap<HungrySoulEntity?, Entity> {
@@ -100,7 +102,7 @@ class ModEvents() : IHungrySouls {
 
 
 
-                        Methods().smoothMovement(hungrySoul, playerEntity)
+                        Methods().smoothMovement(hungrySoul, playerEntity, 0.1f)
                     }
                     val nbt = CompoundTag()
                     hungrySoul.saveWithoutId(nbt)
@@ -178,17 +180,7 @@ class ModEvents() : IHungrySouls {
         //HungrySoulRender.scale = 5f
     }
 
-    @SubscribeEvent
-    fun playerTick(event: TickEvent.PlayerTickEvent) {
-        val player = event.player
-    }
 
-    @SubscribeEvent
-    fun onPlaceBlock(event: BlockEvent.EntityPlaceEvent) {
-        val pos: Vec3 = event.pos.toVec3()
-        val sculkCreepers: List<SculkCreeperEntity> = event.entity?.level()!!.getEntitiesOfClass(SculkCreeperEntity::class.java, AABB.ofSize(pos, 8.0, 8.0, 8.0))
-        sculkCreepers.forEach { sculkCreeperEntity -> sculkCreeperEntity.soundVibration(event.entity) }
-    }
 
     fun registerCaps(event: RegisterCapabilitiesEvent) {
         //event.register<IExampleCapability?>(IExampleCapability::class.java)

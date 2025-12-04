@@ -1,5 +1,8 @@
 package ru.deepdarkaddition.mixins;
 
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import ru.deepdarkaddition.entity.ModEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -26,9 +29,9 @@ import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 
 @Mixin(SculkCatalystBlockEntity.CatalystListener.class)
-public abstract class MixinSculkCatalystBlockEntity implements GameEventListener {
+public abstract class MixinSculkCatalystBlockEntity {
 
-    @Shadow
+    @Shadow(remap = true)
     private void tryAwardItSpreadsAdvancement(Level pLevel, LivingEntity pEntity) {}
 
     @Shadow
@@ -40,11 +43,16 @@ public abstract class MixinSculkCatalystBlockEntity implements GameEventListener
     @Shadow
     private PositionSource positionSource;
 
+
+    @Shadow
+    public void bloom(ServerLevel pLevel, BlockPos pPos, BlockState pState, RandomSource pRandom) {}
+
     //@Shadow
     //private void bloom(ServerLevel pLevel, BlockPos pPos, BlockState pState, RandomSource pRandom) {}
 
-    @Overwrite
-    public boolean handleGameEvent(ServerLevel pLevel, GameEvent pGameEvent, GameEvent.Context pContext, Vec3 pPos) {
+    @Inject(method = "canTargetEntity", at = @At("HEAD"), cancellable = true)
+    private void handleGameEvent(ServerLevel pLevel, GameEvent pGameEvent, GameEvent.Context pContext, Vec3 pPos, CallbackInfoReturnable<Boolean> cir) {
+        Boolean returnValue = false;
         if (pGameEvent == GameEvent.ENTITY_DIE) {
             Entity var6 = pContext.sourceEntity();
             if (var6 instanceof LivingEntity) {
@@ -65,17 +73,13 @@ public abstract class MixinSculkCatalystBlockEntity implements GameEventListener
                     this.positionSource.getPosition(pLevel).ifPresent((p_289513_) -> this.bloom(pLevel, BlockPos.containing(p_289513_), this.blockState, pLevel.getRandom()));
                 }
 
-                return true;
+                returnValue = true;
             }
         }
 
-        return false;
-    }
-    @Overwrite
-    public void bloom(ServerLevel pLevel, BlockPos pPos, BlockState pState, RandomSource pRandom) {
-        pLevel.setBlock(pPos, (BlockState)pState.setValue(SculkCatalystBlock.PULSE, true), 3);
-        pLevel.scheduleTick(pPos, pState.getBlock(), 8);
-        pLevel.sendParticles(ParticleTypes.SCULK_SOUL, (double)pPos.getX() + (double)0.5F, (double)pPos.getY() + 1.15, (double)pPos.getZ() + (double)0.5F, 2, 0.2, (double)0.0F, 0.2, (double)0.0F);
-        pLevel.playSound((Player)null, pPos, SoundEvents.SCULK_CATALYST_BLOOM, SoundSource.BLOCKS, 2.0F, 0.6F + pRandom.nextFloat() * 0.4F);
+        returnValue = false;
+        cir.setReturnValue(returnValue);
+
+        cir.cancel();
     }
 }

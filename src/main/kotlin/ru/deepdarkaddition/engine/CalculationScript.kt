@@ -4,15 +4,22 @@ import net.minecraft.client.Minecraft
 import net.minecraft.world.phys.Vec3
 
 class CalculationScript {
-    val minecraft: Minecraft = Minecraft.getInstance()
 
-    private val widthOfScreen = minecraft.screen?.width ?: 1
-    private val heightOfScreen = minecraft.screen?.height ?: 1
 
     fun calculateCenterOfScrennX(widthOfImage: Int): Int {
+        val minecraft: Minecraft = Minecraft.getInstance()
+
+         val widthOfScreen = minecraft.screen?.width ?: 1
+         val heightOfScreen = minecraft.screen?.height ?: 1
+
         return (widthOfScreen/2) + (widthOfImage/2)
     }
     fun calculateCenterOfScrennY(heightOfImage: Int): Int {
+        val minecraft: Minecraft = Minecraft.getInstance()
+
+         val widthOfScreen = minecraft.screen?.width ?: 1
+         val heightOfScreen = minecraft.screen?.height ?: 1
+
         return ((heightOfScreen) + (heightOfImage))/3
     }
 

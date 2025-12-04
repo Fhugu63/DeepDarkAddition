@@ -1,7 +1,7 @@
 # Make sure this is set to "kotlinforforge"
 modLoader="kotlinforforge"
 # Make sure this is set to the appropriate version range
-loaderVersion="[4.11,)" # Require at least 4.11.x
+loaderVersion="[4.10.0,)" # Require at least 4.11.x
 license="${mod_license}"
 
 [[mods]]
@@ -23,4 +23,10 @@ description='''${mod_description}'''
     mandatory=true
     versionRange="[1.20,1.21)"
     ordering="NONE"
+    side="BOTH"
+[[dependencies.${mod_id}]]
+    modId="kotlinforforge"
+    mandatory=true
+    versionRange="[4.10,)"
+    ordering="AFTER"
     side="BOTH"

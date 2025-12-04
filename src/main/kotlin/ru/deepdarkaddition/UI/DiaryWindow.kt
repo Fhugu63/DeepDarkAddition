@@ -108,8 +108,8 @@ class DiaryWindow(title: Component, getedNumOfPart: Int): Screen(title) {
     }
 
     override fun removed() {
-        ModItems().RESEARHDIARYPARTONE().flag = false
-        ModItems().RESEARHDIARYPARTTWO().flag = false
+        ModItems().RESEARHDIARYPARTONE.get().flag = false
+        ModItems().RESEARHDIARYPARTTWO.get().flag = false
         super.removed()
     }
 }

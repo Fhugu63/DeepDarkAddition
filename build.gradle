@@ -13,6 +13,8 @@ apply plugin: 'org.spongepowered.mixin'
 version = mod_version
 group = mod_group_id
 
+def Version = 2
+
 base {
     archivesName = mod_id
 }
@@ -128,7 +130,7 @@ def replaceProperties = [
         minecraft_version: minecraft_version, minecraft_version_range: minecraft_version_range,
         forge_version: forge_version, forge_version_range: forge_version_range,
         mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
-        mod_authors: mod_authors, mod_description: mod_description
+        mod_authors: mod_authors, mod_description: mod_description, kff_version: kff_version
 ]
 processResources {
     inputs.properties replaceProperties
@@ -166,6 +168,42 @@ mixin {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+}
+
+tasks.register('buildUnstableJar', Jar) {
+    archiveClassifier.set('unstable')
+    setArchiveVersion("0.0.${Version}-1.20.1")
+
+    jar.archiveFile
+}
+
+tasks.named('buildUnstableJar').configure {
+    dependsOn tasks.named('classes')
+}
+
+
+
+tasks.register('buildStableJar', Jar) {
+    archiveClassifier.set('stable')
+    setArchiveVersion("0.0.${Version}-1.20.1")
+
+    jar.archiveFile
+}
+
+tasks.named('buildStableJar').configure {
+    dependsOn tasks.named('classes')
+}
+
+tasks.register('copyModToMc', Copy) {
+    description = 'Копирует собранный JAR в папку run/mods для тестирования.'
+
+    from jar.archiveFile
+
+    // Куда копировать
+    into file('C:\\Users\\Kuler\\AppData\\Roaming\\.minecraft\\mods')
+
+    // Также можно указать, что эта задача должна выполняться только после сборки shadowJar
+    dependsOn buildUnstableJar
 }
 
 // The below is only required if using 'maven-publish' and you want to publish to maven or use JitPack

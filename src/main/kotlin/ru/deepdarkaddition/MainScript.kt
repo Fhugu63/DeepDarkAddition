@@ -12,12 +12,14 @@ import org.apache.logging.log4j.Level
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import ru.deepdarkaddition.block.ModBlocks
+import ru.deepdarkaddition.engine.SoundListiner
 import ru.deepdarkaddition.entity.ModEntities
 import ru.deepdarkaddition.entity.client.SculkCreeper.SculkCreeperRenderer
 import ru.deepdarkaddition.entity.client.luiza.HungrySoulRender
 import ru.deepdarkaddition.entity.custom.SculkCreeperEntity
 import ru.deepdarkaddition.events.ModEvents
 import ru.deepdarkaddition.item.ModItems
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext
 import thedarkcolour.kotlinforforge.forge.MOD_BUS
 import thedarkcolour.kotlinforforge.forge.runForDist
 
@@ -39,9 +41,11 @@ class MainScript {
 
         ModItems().REGISTRY.register(MOD_BUS)
 
+
         ModEntities.register(MOD_BUS)
 
         MinecraftForge.EVENT_BUS.register(ModEvents())
+        MinecraftForge.EVENT_BUS.register(SoundListiner())
 
         //MinecraftForge.EVENT_BUS.register(ModEvents())
 
@@ -52,14 +56,12 @@ class MainScript {
         val obj = runForDist(
             clientTarget = {
                 MOD_BUS.addListener(::onClientSetup)
-                Minecraft.getInstance()
+                //Minecraft.getInstance()
             },
             serverTarget = {
                 MOD_BUS.addListener(::onServerSetup)
                 "test"
             })
-
-        println(obj)
     }
 
     /**
