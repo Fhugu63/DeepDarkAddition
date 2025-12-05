@@ -21,6 +21,8 @@ import net.minecraft.world.entity.ai.attributes.Attributes
 import net.minecraft.world.entity.ai.goal.BreedGoal
 import net.minecraft.world.entity.ai.goal.FloatGoal
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal
+import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal
 import net.minecraft.world.entity.ai.memory.WalkTarget
 import net.minecraft.world.entity.monster.warden.AngerManagement
@@ -86,6 +88,8 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
         goalSelector.addGoal(1, MeleeAttackGoal(this, 2.0, true))
         this.targetSelector.addGoal(1, HurtByTargetGoal(this))
 
+        goalSelector.addGoal(9, WaterAvoidingRandomStrollGoal(this, 0.5))
+        goalSelector.addGoal(10, RandomLookAroundGoal(this))
     }
 
     // Позиция источника вибрации (используем высоту глаз)
@@ -94,6 +98,17 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
 
     override fun sendDebugPackets() {
 
+    }
+
+    override fun setTarget(pTarget: LivingEntity?) {
+        if (target != null) {
+            targetUUID = target!!.uuid
+        }
+        super.setTarget(pTarget)
+    }
+
+    fun deleteTarget() {
+        this.target = null
     }
 
     fun detectNearestPlayer(sculkCreeper: Entity): Player? {
@@ -105,9 +120,13 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
         if (entity is LivingEntity) {
             val entityType = entity.type
             if (EntitySelector.NO_CREATIVE_OR_SPECTATOR.test(entity) && entityType != EntityType.ARMOR_STAND && entityType != EntityType.WARDEN
-                && entityType != ModEntities.HUNGRYSOULENTITY.get() && entityType != ModEntities.SCULKCREEPERENTITY.get() && entityType == EntityType.PLAYER
+                && entityType != ModEntities.HUNGRYSOULENTITY.get() && entityType != ModEntities.SCULKCREEPERENTITY.get() && entityType != EntityType.ARROW &&
+                entityType != EntityType.SPECTRAL_ARROW && entityType != EntityType.ITEM && entityType != EntityType.ITEM_FRAME && entityType != EntityType.ITEM_DISPLAY
+                && this.isAlive && distanceTo(entity) <= 30
             ) {
                 return true
+            } else {
+                deleteTarget()
             }
         }
         return false
@@ -123,7 +142,7 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
 
             sLevel.sendParticles(
                 particle,
-                position().x, position().y, position().z,
+                position().x, position().y+1, position().z,
                 50,
                 0.1, 0.1, 0.1,
                 1.0
@@ -134,7 +153,6 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
         }
     }
 
-    //@ReactOnVibrations
     fun soundVibration(entity: Entity?, pos: BlockPos, radius: Int = 16) {
         if (entity != null && entity.isAlive && canTargerEntity(entity)) {
             val entity = entity as LivingEntity
@@ -154,9 +172,8 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
                         0.0
                     )
 
-                    target = entity
-                    targetUUID = target!!.uuid
-                } else if (level.isClientSide) {
+                    setTarget(entity)
+                /*} else if (level.isClientSide) {
                     val cLevel = level as ClientLevel
                     cLevel.addParticle(
                         particle,
@@ -164,7 +181,7 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
                         pPos.x + 0.5, pPos.y + 0.5, pPos.z + 0.5,
                         0.0, 0.0, 0.0
                     )
-                    target = entity
+                    target = entity*/
                 }
             }
         }
@@ -176,6 +193,11 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
         if (!this.level().isClientSide) {
             val serverLevel = this.level() as ServerLevel
 
+            if (this.tickCount % 40 == 0) {
+                Warden.applyDarknessAround(serverLevel, position(), this, 16)
+            }
+
+
             if (numOfAngry <= 30) {
                 stepOfAngry = StepOfAngry.NEUTRAL
             } else if (numOfAngry <= 80) {
@@ -185,7 +207,7 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
             }
 
             if (target != null) {
-                val desiredSpeed = if (numOfAngry >= 80) 1.2 else 0.7
+                val desiredSpeed = if (numOfAngry >= 60) 1.3 else 0.7
 
                 this.navigation.moveTo(target!!.x, target!!.y, target!!.z, desiredSpeed)
 
@@ -207,7 +229,6 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
                 cooldownToAbility--
             }
         }
-
 
         super.tick()
     }

@@ -19,7 +19,7 @@ class ModItems {
     val RESEARHDIARYPARTTWO = REGISTRY.register("rdp_two") {
         ResearhDiaryPartTwoItem(Item.Properties().rarity(Rarity.RARE))
     }
-
+/*
     val RESEARHDIARYPARTTHREE = REGISTRY.register("rdp_three") {
         ResearhDiaryPartThreeItem(Item.Properties().rarity(Rarity.RARE))
     }
@@ -30,7 +30,7 @@ class ModItems {
 
     val RESEARHDIARYPARTFIVE = REGISTRY.register("rdp_five") {
         ResearhDiaryPartFiveItem(Item.Properties().rarity(Rarity.RARE))
-    }
+    }*/
 
     val HUNGRYSOUL = REGISTRY.register("hungry_soul") {
         HungySoulItem(Item.Properties().rarity(mythycalRarity).stacksTo(1))
