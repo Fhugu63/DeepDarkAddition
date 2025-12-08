@@ -1,117 +1,84 @@
 Picked up _JAVA_OPTIONS: 
-2025-12-08 19:59:06,116 main WARN Advanced terminal features are not available in this environment
-[19:59:07] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--username, maks_py1, --version, Forge 1.20.1, --gameDir, C:\Users\Kuler\AppData\Roaming\.minecraft, --assetsDir, C:\Users\Kuler\AppData\Roaming\.minecraft\assets, --assetIndex, 5, --uuid, dbdf9a41d52233ffbb699325e90ac7c0, --accessToken, ❄❄❄❄❄❄❄❄, --clientId, , --xuid, , --userType, legacy, --versionType, modified, --width, 925, --height, 530, --launchTarget, forgeclient, --fml.forgeVersion, 47.4.10, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412]
-[19:59:07] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.15 by Microsoft; OS Windows 10 arch amd64 version 10.0
-[19:59:09] [main/WARN] [ne.mi.fm.lo.FMLConfig/CORE]: Configuration file C:\Users\Kuler\AppData\Roaming\.minecraft\config\fml.toml is not correct. Correcting
-[19:59:09] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowLogHelpMessage] was corrected from null to true
-[19:59:09] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowShowCPU] was corrected from null to false
-[19:59:09] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [disableConfigWatcher] was corrected from false to null
-[19:59:10] [main/INFO] [ne.mi.fm.lo.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[19:59:13] [main/ERROR] [EARLYDISPLAY/]: WARNING : glfwInit took 2.5741462 seconds to start.
-[19:59:13] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[19:59:13] [main/INFO] [EARLYDISPLAY/]: If this message is the only thing at the bottom of your log before a crash, you probably have a driver issue.
-
-Possible solutions:
-A) Make sure Minecraft is set to prefer high performance graphics in the OS and/or driver control panel
-B) Check for driver updates on the graphics brand's website
-C) Try reinstalling your graphics drivers
-D) If still not working after trying all of the above, ask for further help on the Forge forums or Discord
-
-You can safely ignore this message if the game starts up successfully.
-[19:59:17] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[19:59:18] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: AMD Radeon (TM) R7 360 Series GL version 4.6.13559 Core Profile Forward-Compatible Context 26.20.12028.2, ATI Technologies Inc.
-[19:59:19] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/Kuler/AppData/Roaming/.minecraft/libraries/org/spongepowered/mixin/0.8.5/mixin-0.8.5.jar%23100!/ Service=ModLauncher Env=CLIENT
-[19:59:23] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file C:\Users\Kuler\AppData\Roaming\.minecraft\libraries\net\minecraftforge\fmlcore\1.20.1-47.4.10\fmlcore-1.20.1-47.4.10.jar is missing mods.toml file
-[19:59:24] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file C:\Users\Kuler\AppData\Roaming\.minecraft\libraries\net\minecraftforge\javafmllanguage\1.20.1-47.4.10\javafmllanguage-1.20.1-47.4.10.jar is missing mods.toml file
-[19:59:24] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file C:\Users\Kuler\AppData\Roaming\.minecraft\libraries\net\minecraftforge\lowcodelanguage\1.20.1-47.4.10\lowcodelanguage-1.20.1-47.4.10.jar is missing mods.toml file
-[19:59:24] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file C:\Users\Kuler\AppData\Roaming\.minecraft\libraries\net\minecraftforge\mclanguage\1.20.1-47.4.10\mclanguage-1.20.1-47.4.10.jar is missing mods.toml file
-[19:59:24] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Found 3 dependencies adding them to mods collection
-[19:59:33] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[19:59:33] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclient' with arguments [--version, Forge 1.20.1, --gameDir, C:\Users\Kuler\AppData\Roaming\.minecraft, --assetsDir, C:\Users\Kuler\AppData\Roaming\.minecraft\assets, --uuid, dbdf9a41d52233ffbb699325e90ac7c0, --username, maks_py1, --assetIndex, 5, --accessToken, ❄❄❄❄❄❄❄❄, --clientId, , --xuid, , --userType, legacy, --versionType, modified, --width, 925, --height, 530]
-[19:59:35] [main/WARN] [mixin/]: Reference map 'deepdarkadddition.refmap.json' for deepdarkaddition.mixins.json could not be read. If this is a development environment you can ignore this message
-[20:01:05] [Datafixer Bootstrap/INFO] [mojang/DataFixerBuilder]: 188 Datafixer optimizations took 16874 milliseconds
-[20:01:08] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/Kuler/AppData/Roaming/.minecraft/libraries/net/minecraft/client/1.20.1-20230612.114412/client-1.20.1-20230612.114412-srg.jar%23160!/assets/.mcassetsroot' uses unexpected schema
-[20:01:08] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/Kuler/AppData/Roaming/.minecraft/libraries/net/minecraft/client/1.20.1-20230612.114412/client-1.20.1-20230612.114412-srg.jar%23160!/data/.mcassetsroot' uses unexpected schema
-[20:01:08] [Render thread/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.ely.by/auth', accountsHost='https://account.ely.by/api/mojang', sessionHost='https://account.ely.by/api/authlib-injector/sessionserver', servicesHost='https://account.ely.by/api/mojang/services', name='ELY'
-[20:01:08] [Render thread/INFO] [minecraft/Minecraft]: Setting user: maks_py1
-[20:01:09] [Render thread/INFO] [minecraft/Minecraft]: Backend library: LWJGL version 3.3.1 build 7
-[20:01:17] [modloading-worker-0/INFO] [deepdarkaddition/]: Hello world!
-[20:01:17] [modloading-worker-0/INFO] [th.ko.te.KotlinForForge/]: Kotlin For Forge Enabled!
-[20:01:17] [modloading-worker-0/INFO] [ne.mi.co.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.10, for MC 1.20.1 with MCP 20230612.114412
-[20:01:17] [modloading-worker-0/INFO] [ne.mi.co.MinecraftForge/FORGE]: MinecraftForge v47.4.10 Initialized
-[20:02:56] [Render thread/INFO] [minecraft/ReloadableResourceManager]: Reloading ResourceManager: mod_resources, vanilla
-[20:02:56] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file C:\Users\Kuler\AppData\Roaming\.minecraft\config\forge-client.toml is not correct. Correcting
-[20:02:56] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.allowMipmapLowering was corrected from null to its default, false. 
-[20:02:59] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[20:03:00] [Worker-Main-1/INFO] [minecraft/UnihexProvider]: Found unifont_all_no_pua-15.0.06.hex, loading
-[20:03:03] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 47.4.10 Target: null
-[20:03:14] [Worker-Main-1/INFO] [deepdarkaddition/]: Initializing client...
-[20:03:20] [Render thread/WARN] [minecraft/SoundEngine]: Missing sound for event: minecraft:item.goat_horn.play
-[20:03:20] [Render thread/WARN] [minecraft/SoundEngine]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[20:03:20] [Render thread/INFO] [mojang/Library]: OpenAL initialized on device OpenAL Soft on Динамики (High Definition Audio Device)
-[20:03:20] [Render thread/INFO] [minecraft/SoundEngine]: Sound engine started
-[20:03:20] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x2 minecraft:textures/atlas/blocks.png-atlas
-[20:03:21] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x2 minecraft:textures/atlas/signs.png-atlas
-[20:03:21] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x2 minecraft:textures/atlas/banner_patterns.png-atlas
-[20:03:21] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x2 minecraft:textures/atlas/shield_patterns.png-atlas
-[20:03:21] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x1024x2 minecraft:textures/atlas/armor_trims.png-atlas
-[20:03:21] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 128x64x2 minecraft:textures/atlas/decorated_pot.png-atlas
-[20:03:21] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x2 minecraft:textures/atlas/chest.png-atlas
-[20:03:21] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x2 minecraft:textures/atlas/beds.png-atlas
-[20:03:21] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x2 minecraft:textures/atlas/shulker_boxes.png-atlas
-[20:03:22] [Render thread/WARN] [minecraft/ShaderInstance]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[20:03:22] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[20:03:22] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[20:03:22] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[20:03:23] [Realms Notification Availability checker #1/INFO] [mojang/RealmsClient]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: dbdf9a41d52233ffbb699325e90ac7c0
-[20:04:25] [Render thread/INFO] [minecraft/RecipeManager]: Loaded 7 recipes
-[20:04:25] [Render thread/INFO] [minecraft/AdvancementList]: Loaded 1271 advancements
-[20:04:27] [Server thread/INFO] [minecraft/IntegratedServer]: Starting integrated minecraft server version 1.20.1
-[20:04:27] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
-[20:04:30] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
-[20:04:33] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:33] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:33] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:33] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:33] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:33] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:33] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:34] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:34] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:36] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:36] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:36] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:36] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:37] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:37] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:38] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:38] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:39] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:41] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:41] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:41] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:41] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:41] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:42] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
-[20:04:42] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 1%
-[20:04:43] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 4%
-[20:04:43] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 4%
-[20:04:44] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 43%
-[20:04:44] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 80%
-[20:04:46] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[20:04:46] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 15639 ms
-[20:04:47] [Server thread/INFO] [minecraft/IntegratedServer]: Changing view distance to 12, from 10
-[20:04:47] [Server thread/INFO] [minecraft/IntegratedServer]: Changing simulation distance to 12, from 0
-[20:04:48] [Render thread/WARN] [io.ne.ut.in.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
-[20:04:48] [Server thread/WARN] [minecraft/MinecraftServer]: Can't keep up! Is the server overloaded? Running 2238ms or 44 ticks behind
-[20:04:55] [Netty Local Client IO #0/INFO] [ne.mi.ne.NetworkHooks/]: Connected to a modded server.
-[20:04:56] [Server thread/INFO] [minecraft/PlayerList]: maks_py1[local:E:ffee21b6] logged in with entity id 94 at (-6.031465117984143, -59.36985999386838, 13.661480339065497)
-[20:04:57] [Server thread/INFO] [minecraft/MinecraftServer]: maks_py1 присоединился к игре
-[20:05:07] [Server thread/WARN] [minecraft/MinecraftServer]: Can't keep up! Is the server overloaded? Running 2270ms or 45 ticks behind
-[20:05:08] [Render thread/INFO] [minecraft/AdvancementList]: Loaded 68 advancements
-[20:05:30] [Server thread/WARN] [minecraft/MinecraftServer]: Can't keep up! Is the server overloaded? Running 8008ms or 160 ticks behind
-[20:05:47] [Server thread/FATAL] [mixin/]: Mixin apply failed deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException Critical injection failure: @Inject annotation on handleGameEvent could not find any targets matching 'handleGameEvent' in net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener. No refMap loaded. [PREINJECT Applicator Phase -> deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> Prepare Injections ->  -> handler$zza000$handleGameEvent(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
-org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @Inject annotation on handleGameEvent could not find any targets matching 'handleGameEvent' in net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener. No refMap loaded. [PREINJECT Applicator Phase -> deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> Prepare Injections ->  -> handler$zza000$handleGameEvent(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
+2025-12-08 22:24:58,785 main WARN Advanced terminal features are not available in this environment
+2025-12-08 22:25:00,300 main ERROR Unable to delete file C:\Users\Kuler\AppData\Roaming\.minecraft\logs\latest.log: java.nio.file.FileSystemException C:\Users\Kuler\AppData\Roaming\.minecraft\logs\latest.log: Процесс не может получить доступ к файлу, так как этот файл занят другим процессом
+[22:25:00] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--username, maks_py1, --version, Forge 1.20.1, --gameDir, C:\Users\Kuler\AppData\Roaming\.minecraft, --assetsDir, C:\Users\Kuler\AppData\Roaming\.minecraft\assets, --assetIndex, 5, --uuid, dbdf9a41d52233ffbb699325e90ac7c0, --accessToken, ❄❄❄❄❄❄❄❄, --clientId, , --xuid, , --userType, legacy, --versionType, modified, --width, 925, --height, 530, --launchTarget, forgeclient, --fml.forgeVersion, 47.4.10, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412]
+[22:25:00] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.15 by Microsoft; OS Windows 10 arch amd64 version 10.0
+[22:25:01] [main/INFO] [ne.mi.fm.lo.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[22:25:02] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[22:25:03] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[22:25:06] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: AMD Radeon (TM) R7 360 Series GL version 4.6.13559 Core Profile Forward-Compatible Context 26.20.12028.2, ATI Technologies Inc.
+[22:25:07] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/Kuler/AppData/Roaming/.minecraft/libraries/org/spongepowered/mixin/0.8.5/mixin-0.8.5.jar%23100!/ Service=ModLauncher Env=CLIENT
+[22:25:12] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file C:\Users\Kuler\AppData\Roaming\.minecraft\libraries\net\minecraftforge\fmlcore\1.20.1-47.4.10\fmlcore-1.20.1-47.4.10.jar is missing mods.toml file
+[22:25:12] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file C:\Users\Kuler\AppData\Roaming\.minecraft\libraries\net\minecraftforge\javafmllanguage\1.20.1-47.4.10\javafmllanguage-1.20.1-47.4.10.jar is missing mods.toml file
+[22:25:12] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file C:\Users\Kuler\AppData\Roaming\.minecraft\libraries\net\minecraftforge\lowcodelanguage\1.20.1-47.4.10\lowcodelanguage-1.20.1-47.4.10.jar is missing mods.toml file
+[22:25:12] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file C:\Users\Kuler\AppData\Roaming\.minecraft\libraries\net\minecraftforge\mclanguage\1.20.1-47.4.10\mclanguage-1.20.1-47.4.10.jar is missing mods.toml file
+[22:25:15] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Found 3 dependencies adding them to mods collection
+[22:25:32] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[22:25:32] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclient' with arguments [--version, Forge 1.20.1, --gameDir, C:\Users\Kuler\AppData\Roaming\.minecraft, --assetsDir, C:\Users\Kuler\AppData\Roaming\.minecraft\assets, --uuid, dbdf9a41d52233ffbb699325e90ac7c0, --username, maks_py1, --assetIndex, 5, --accessToken, ❄❄❄❄❄❄❄❄, --clientId, , --xuid, , --userType, legacy, --versionType, modified, --width, 925, --height, 530]
+[22:25:33] [main/WARN] [mixin/]: Reference map 'deepdarkadddition.refmap.json' for deepdarkaddition.mixins.json could not be read. If this is a development environment you can ignore this message
+[22:27:11] [Datafixer Bootstrap/INFO] [mojang/DataFixerBuilder]: 188 Datafixer optimizations took 3863 milliseconds
+[22:27:13] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/Kuler/AppData/Roaming/.minecraft/libraries/net/minecraft/client/1.20.1-20230612.114412/client-1.20.1-20230612.114412-srg.jar%23160!/assets/.mcassetsroot' uses unexpected schema
+[22:27:13] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/Kuler/AppData/Roaming/.minecraft/libraries/net/minecraft/client/1.20.1-20230612.114412/client-1.20.1-20230612.114412-srg.jar%23160!/data/.mcassetsroot' uses unexpected schema
+[22:27:13] [Render thread/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.ely.by/auth', accountsHost='https://account.ely.by/api/mojang', sessionHost='https://account.ely.by/api/authlib-injector/sessionserver', servicesHost='https://account.ely.by/api/mojang/services', name='ELY'
+[22:27:13] [Render thread/INFO] [minecraft/Minecraft]: Setting user: maks_py1
+[22:27:13] [Render thread/INFO] [minecraft/Minecraft]: Backend library: LWJGL version 3.3.1 build 7
+[22:27:15] [modloading-worker-0/INFO] [th.ko.te.KotlinForForge/]: Kotlin For Forge Enabled!
+[22:27:15] [modloading-worker-0/INFO] [deepdarkaddition/]: Hello world!
+[22:27:15] [modloading-worker-0/INFO] [ne.mi.co.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.10, for MC 1.20.1 with MCP 20230612.114412
+[22:27:15] [modloading-worker-0/INFO] [ne.mi.co.MinecraftForge/FORGE]: MinecraftForge v47.4.10 Initialized
+[22:27:18] [Render thread/INFO] [minecraft/ReloadableResourceManager]: Reloading ResourceManager: mod_resources, vanilla
+[22:27:19] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[22:27:19] [Worker-Main-1/INFO] [minecraft/UnihexProvider]: Found unifont_all_no_pua-15.0.06.hex, loading
+[22:27:21] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 47.4.10 Target: null
+[22:27:23] [Worker-Main-1/INFO] [deepdarkaddition/]: Initializing client...
+[22:27:25] [Render thread/WARN] [minecraft/SoundEngine]: Missing sound for event: minecraft:item.goat_horn.play
+[22:27:25] [Render thread/WARN] [minecraft/SoundEngine]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[22:27:25] [Render thread/INFO] [mojang/Library]: OpenAL initialized on device OpenAL Soft on Динамики (High Definition Audio Device)
+[22:27:25] [Render thread/INFO] [minecraft/SoundEngine]: Sound engine started
+[22:27:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x2 minecraft:textures/atlas/blocks.png-atlas
+[22:27:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x2 minecraft:textures/atlas/signs.png-atlas
+[22:27:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x2 minecraft:textures/atlas/shield_patterns.png-atlas
+[22:27:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x2 minecraft:textures/atlas/banner_patterns.png-atlas
+[22:27:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x1024x2 minecraft:textures/atlas/armor_trims.png-atlas
+[22:27:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x2 minecraft:textures/atlas/chest.png-atlas
+[22:27:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 128x64x2 minecraft:textures/atlas/decorated_pot.png-atlas
+[22:27:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x2 minecraft:textures/atlas/shulker_boxes.png-atlas
+[22:27:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x2 minecraft:textures/atlas/beds.png-atlas
+[22:27:26] [Render thread/WARN] [minecraft/ShaderInstance]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[22:27:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[22:27:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[22:27:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[22:27:27] [Realms Notification Availability checker #1/INFO] [mojang/RealmsClient]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: dbdf9a41d52233ffbb699325e90ac7c0
+[22:27:36] [Render thread/INFO] [minecraft/RecipeManager]: Loaded 7 recipes
+[22:27:37] [Render thread/INFO] [minecraft/AdvancementList]: Loaded 1271 advancements
+[22:27:37] [Server thread/INFO] [minecraft/IntegratedServer]: Starting integrated minecraft server version 1.20.1
+[22:27:37] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
+[22:27:38] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[22:27:39] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
+[22:27:39] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
+[22:27:39] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
+[22:27:40] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
+[22:27:41] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
+[22:27:41] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
+[22:27:41] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
+[22:27:42] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
+[22:27:42] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
+[22:27:43] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 0%
+[22:27:43] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 5%
+[22:27:44] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 5%
+[22:27:44] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Подготовка области возрождения: 48%
+[22:27:45] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[22:27:45] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 6920 ms
+[22:27:48] [Server thread/WARN] [minecraft/MinecraftServer]: Can't keep up! Is the server overloaded? Running 2770ms or 55 ticks behind
+[22:27:48] [Server thread/INFO] [minecraft/IntegratedServer]: Changing view distance to 12, from 10
+[22:27:48] [Server thread/INFO] [minecraft/IntegratedServer]: Changing simulation distance to 12, from 0
+[22:27:49] [Render thread/WARN] [io.ne.ut.in.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
+[22:27:52] [Netty Local Client IO #0/INFO] [ne.mi.ne.NetworkHooks/]: Connected to a modded server.
+[22:27:52] [Server thread/INFO] [minecraft/PlayerList]: maks_py1[local:E:a54c72cb] logged in with entity id 90 at (-6.031465117984143, -59.36985999386838, 13.661480339065497)
+[22:27:52] [Server thread/INFO] [minecraft/MinecraftServer]: maks_py1 присоединился к игре
+[22:27:53] [Render thread/INFO] [minecraft/AdvancementList]: Loaded 68 advancements
+[22:28:05] [Server thread/FATAL] [mixin/]: Mixin apply failed deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException Critical injection failure: @Inject annotation on onHandleGameEvent could not find any targets matching 'handleGameEvent' in net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener. No refMap loaded. [PREINJECT Applicator Phase -> deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> Prepare Injections ->  -> handler$zza000$onHandleGameEvent(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
+org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @Inject annotation on onHandleGameEvent could not find any targets matching 'handleGameEvent' in net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener. No refMap loaded. [PREINJECT Applicator Phase -> deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> Prepare Injections ->  -> handler$zza000$onHandleGameEvent(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
 	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.validateTargets(InjectionInfo.java:656) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
 	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.findTargets(InjectionInfo.java:587) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
 	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.readAnnotation(InjectionInfo.java:330) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
@@ -171,7 +138,7 @@ org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Crit
 	at net.minecraft.server.MinecraftServer.m_130011_(MinecraftServer.java:665) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B}
 	at net.minecraft.server.MinecraftServer.m_206580_(MinecraftServer.java:251) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B}
 	at java.lang.Thread.run(Thread.java:840) ~[?:?] {}
-[20:05:47] [Server thread/ERROR] [minecraft/MinecraftServer]: Encountered an unexpected exception
+[22:28:05] [Server thread/ERROR] [minecraft/MinecraftServer]: Encountered an unexpected exception
 org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
 	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:392) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
 	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:250) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
@@ -218,7 +185,7 @@ Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [deepda
 	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinApplyError(MixinProcessor.java:588) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
 	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:379) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
 	... 39 more
-Caused by: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @Inject annotation on handleGameEvent could not find any targets matching 'handleGameEvent' in net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener. No refMap loaded. [PREINJECT Applicator Phase -> deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> Prepare Injections ->  -> handler$zza000$handleGameEvent(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
+Caused by: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @Inject annotation on onHandleGameEvent could not find any targets matching 'handleGameEvent' in net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener. No refMap loaded. [PREINJECT Applicator Phase -> deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> Prepare Injections ->  -> handler$zza000$onHandleGameEvent(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
 	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.validateTargets(InjectionInfo.java:656) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
 	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.findTargets(InjectionInfo.java:587) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
 	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.readAnnotation(InjectionInfo.java:330) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
@@ -240,16 +207,317 @@ Caused by: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionExce
 	at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:365) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
 	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:363) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
 	... 39 more
-[20:05:50] [Server thread/FATAL] [ne.mi.co.ForgeMod/]: Preparing crash report with UUID 50f4d0c1-13a9-4581-a83f-113ee7f13d9f
-[20:05:50] [Server thread/ERROR] [minecraft/MinecraftServer]: This crash report has been saved to: C:\Users\Kuler\AppData\Roaming\.minecraft\crash-reports\crash-2025-12-08_20.05.49-server.txt
-[20:05:50] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
-[20:05:50] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
-[20:05:50] [Render thread/FATAL] [ne.mi.co.ForgeMod/]: Preparing crash report with UUID 633791b2-5dd1-415f-b148-119d2c0e2292
+[22:28:06] [Render thread/FATAL] [mixin/]: Mixin apply failed deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException Critical injection failure: @Inject annotation on onHandleGameEvent could not find any targets matching 'handleGameEvent' in net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener. No refMap loaded. [PREINJECT Applicator Phase -> deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> Prepare Injections ->  -> handler$zza000$onHandleGameEvent(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
+org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @Inject annotation on onHandleGameEvent could not find any targets matching 'handleGameEvent' in net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener. No refMap loaded. [PREINJECT Applicator Phase -> deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> Prepare Injections ->  -> handler$zza000$onHandleGameEvent(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.validateTargets(InjectionInfo.java:656) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.findTargets(InjectionInfo.java:587) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.readAnnotation(InjectionInfo.java:330) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:316) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:308) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo.<init>(CallbackInjectionInfo.java:46) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[?:?] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo$InjectorEntry.create(InjectionInfo.java:149) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.parse(InjectionInfo.java:708) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinTargetContext.prepareInjections(MixinTargetContext.java:1311) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.prepareInjections(MixinApplicatorStandard.java:1042) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyMixin(MixinApplicatorStandard.java:393) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:325) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.apply(TargetClassContext.java:383) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:365) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:363) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:250) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.service.modlauncher.MixinTransformationHandler.processClass(MixinTransformationHandler.java:131) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.launch.MixinLaunchPluginLegacy.processClass(MixinLaunchPluginLegacy.java:131) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:156) ~[modlauncher-10.0.9.jar:10.0.9+10.0.9+main.dcd20f30] {}
+	at cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:88) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:120) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:50) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.readerToClass(ModuleClassLoader.java:113) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.lambda$findClass$15(ModuleClassLoader.java:219) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.loadFromModule(ModuleClassLoader.java:229) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.findClass(ModuleClassLoader.java:219) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:135) ~[securejarhandler-2.1.10.jar:?] {}
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[?:?] {}
+	at net.minecraft.world.level.block.entity.SculkCatalystBlockEntity.<init>(SculkCatalystBlockEntity.java:32) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.level.block.SculkCatalystBlock.m_142194_(SculkCatalystBlock.java:43) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk.m_6978_(LevelChunk.java:263) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.level.Level.m_6933_(Level.java:219) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at net.minecraft.client.multiplayer.ClientLevel.m_6933_(ClientLevel.java:159) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.level.Level.m_7731_(Level.java:196) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at net.minecraft.world.item.BlockItem.m_7429_(BlockItem.java:163) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.item.BlockItem.m_40576_(BlockItem.java:68) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.item.BlockItem.m_6225_(BlockItem.java:46) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.item.ItemStack.lambda$useOn$3(ItemStack.java:246) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.world.item.ItemStack.onItemUse(ItemStack.java:261) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.world.item.ItemStack.m_41661_(ItemStack.java:246) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.m_233746_(MultiPlayerGameMode.java:339) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.m_233740_(MultiPlayerGameMode.java:294) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.m_233729_(MultiPlayerGameMode.java:250) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.m_233732_(MultiPlayerGameMode.java:293) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91277_(Minecraft.java:1698) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91279_(Minecraft.java:1976) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91398_(Minecraft.java:1795) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91383_(Minecraft.java:1112) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91374_(Minecraft.java:718) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:218) ~[Forge%201.20.1.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonClientLaunchHandler.lambda$makeService$0(CommonClientLaunchHandler.java:25) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?] {}
+[22:28:06] [Render thread/ERROR] [minecraft/Minecraft]: Unreported exception thrown!
+org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:392) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:250) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.service.modlauncher.MixinTransformationHandler.processClass(MixinTransformationHandler.java:131) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.launch.MixinLaunchPluginLegacy.processClass(MixinLaunchPluginLegacy.java:131) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:156) ~[modlauncher-10.0.9.jar:10.0.9+10.0.9+main.dcd20f30] {}
+	at cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:88) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:120) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:50) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.readerToClass(ModuleClassLoader.java:113) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.lambda$findClass$15(ModuleClassLoader.java:219) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.loadFromModule(ModuleClassLoader.java:229) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.findClass(ModuleClassLoader.java:219) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:135) ~[securejarhandler-2.1.10.jar:?] {}
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[?:?] {}
+	at net.minecraft.world.level.block.entity.SculkCatalystBlockEntity.<init>(SculkCatalystBlockEntity.java:32) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.level.block.SculkCatalystBlock.m_142194_(SculkCatalystBlock.java:43) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk.m_6978_(LevelChunk.java:263) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.level.Level.m_6933_(Level.java:219) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at net.minecraft.client.multiplayer.ClientLevel.m_6933_(ClientLevel.java:159) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.level.Level.m_7731_(Level.java:196) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at net.minecraft.world.item.BlockItem.m_7429_(BlockItem.java:163) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.item.BlockItem.m_40576_(BlockItem.java:68) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.item.BlockItem.m_6225_(BlockItem.java:46) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.item.ItemStack.lambda$useOn$3(ItemStack.java:246) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.world.item.ItemStack.onItemUse(ItemStack.java:261) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.world.item.ItemStack.m_41661_(ItemStack.java:246) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.m_233746_(MultiPlayerGameMode.java:339) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.m_233740_(MultiPlayerGameMode.java:294) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.m_233729_(MultiPlayerGameMode.java:250) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.m_233732_(MultiPlayerGameMode.java:293) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91277_(Minecraft.java:1698) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91279_(Minecraft.java:1976) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91398_(Minecraft.java:1795) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91383_(Minecraft.java:1112) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91374_(Minecraft.java:718) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:218) ~[Forge%201.20.1.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonClientLaunchHandler.lambda$makeService$0(CommonClientLaunchHandler.java:25) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?] {}
+Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity] from phase [DEFAULT] in config [deepdarkaddition.mixins.json] FAILED during APPLY
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinError(MixinProcessor.java:636) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinApplyError(MixinProcessor.java:588) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:379) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	... 50 more
+Caused by: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @Inject annotation on onHandleGameEvent could not find any targets matching 'handleGameEvent' in net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener. No refMap loaded. [PREINJECT Applicator Phase -> deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> Prepare Injections ->  -> handler$zza000$onHandleGameEvent(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.validateTargets(InjectionInfo.java:656) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.findTargets(InjectionInfo.java:587) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.readAnnotation(InjectionInfo.java:330) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:316) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:308) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo.<init>(CallbackInjectionInfo.java:46) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[?:?] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo$InjectorEntry.create(InjectionInfo.java:149) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.parse(InjectionInfo.java:708) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinTargetContext.prepareInjections(MixinTargetContext.java:1311) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.prepareInjections(MixinApplicatorStandard.java:1042) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyMixin(MixinApplicatorStandard.java:393) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:325) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.apply(TargetClassContext.java:383) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:365) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:363) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	... 50 more
+[22:28:06] [Server thread/FATAL] [ne.mi.co.ForgeMod/]: Preparing crash report with UUID 7654585b-dced-4d1a-86b8-27a18c19bddb
+[22:28:06] [Server thread/ERROR] [minecraft/MinecraftServer]: This crash report has been saved to: C:\Users\Kuler\AppData\Roaming\.minecraft\crash-reports\crash-2025-12-08_22.28.06-server.txt
+[22:28:06] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[22:28:06] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[22:28:06] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: maks_py1 lost connection: Сервер закрыт
+[22:28:06] [Server thread/INFO] [minecraft/MinecraftServer]: maks_py1 покинул игру
+[22:28:06] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: Stopping singleplayer server as player logged out
+[22:28:06] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[22:28:08] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Новый мир]'/minecraft:overworld
+[22:28:09] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Новый мир]'/minecraft:the_end
+[22:28:09] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Новый мир]'/minecraft:the_nether
+[22:28:09] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (Новый мир (3)): All chunks are saved
+[22:28:09] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[22:28:09] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[22:28:09] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[22:28:11] [Render thread/FATAL] [mixin/]: Mixin apply failed deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException Critical injection failure: @Inject annotation on onHandleGameEvent could not find any targets matching 'handleGameEvent' in net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener. No refMap loaded. [PREINJECT Applicator Phase -> deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> Prepare Injections ->  -> handler$zza000$onHandleGameEvent(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
+org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @Inject annotation on onHandleGameEvent could not find any targets matching 'handleGameEvent' in net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener. No refMap loaded. [PREINJECT Applicator Phase -> deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> Prepare Injections ->  -> handler$zza000$onHandleGameEvent(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.validateTargets(InjectionInfo.java:656) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.findTargets(InjectionInfo.java:587) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.readAnnotation(InjectionInfo.java:330) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:316) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:308) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo.<init>(CallbackInjectionInfo.java:46) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[?:?] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo$InjectorEntry.create(InjectionInfo.java:149) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.parse(InjectionInfo.java:708) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinTargetContext.prepareInjections(MixinTargetContext.java:1311) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.prepareInjections(MixinApplicatorStandard.java:1042) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyMixin(MixinApplicatorStandard.java:393) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:325) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.apply(TargetClassContext.java:383) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:365) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:363) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:250) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.service.modlauncher.MixinTransformationHandler.processClass(MixinTransformationHandler.java:131) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.launch.MixinLaunchPluginLegacy.processClass(MixinLaunchPluginLegacy.java:131) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:156) ~[modlauncher-10.0.9.jar:10.0.9+10.0.9+main.dcd20f30] {}
+	at cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:88) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:120) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:50) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.readerToClass(ModuleClassLoader.java:113) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.lambda$findClass$15(ModuleClassLoader.java:219) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.loadFromModule(ModuleClassLoader.java:229) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.findClass(ModuleClassLoader.java:219) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:135) ~[securejarhandler-2.1.10.jar:?] {}
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[?:?] {}
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[?:?] {}
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[?:?] {}
+	at java.lang.Class.getDeclaredMethods(Class.java:2504) ~[?:?] {}
+	at net.minecraftforge.logging.CrashReportAnalyser.findMixinMerged(CrashReportAnalyser.java:188) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.getMixinInfo(CrashReportAnalyser.java:211) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.identifyByMixins(CrashReportAnalyser.java:147) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.scanStacktrace(CrashReportAnalyser.java:116) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.scanThrowable(CrashReportAnalyser.java:102) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.analyseCrashReport(CrashReportAnalyser.java:55) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.appendSuspectedMods(CrashReportAnalyser.java:39) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraft.CrashReport.m_127519_(CrashReport.java:60) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.CrashReport.m_127526_(CrashReport.java:114) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.client.Minecraft.m_91332_(Minecraft.java:842) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91374_(Minecraft.java:743) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:218) ~[Forge%201.20.1.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonClientLaunchHandler.lambda$makeService$0(CommonClientLaunchHandler.java:25) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?] {}
+[22:28:11] [Render thread/ERROR] [ne.mi.lo.CrashReportAnalyser/]: Failed to append suspected mod(s) to crash report!
+org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:392) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:250) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.service.modlauncher.MixinTransformationHandler.processClass(MixinTransformationHandler.java:131) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.launch.MixinLaunchPluginLegacy.processClass(MixinLaunchPluginLegacy.java:131) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:156) ~[modlauncher-10.0.9.jar:10.0.9+10.0.9+main.dcd20f30] {}
+	at cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:88) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:120) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:50) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.readerToClass(ModuleClassLoader.java:113) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.lambda$findClass$15(ModuleClassLoader.java:219) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.loadFromModule(ModuleClassLoader.java:229) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.findClass(ModuleClassLoader.java:219) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:135) ~[securejarhandler-2.1.10.jar:?] {}
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[?:?] {}
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[?:?] {}
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[?:?] {}
+	at java.lang.Class.getDeclaredMethods(Class.java:2504) ~[?:?] {}
+	at net.minecraftforge.logging.CrashReportAnalyser.findMixinMerged(CrashReportAnalyser.java:188) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.getMixinInfo(CrashReportAnalyser.java:211) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.identifyByMixins(CrashReportAnalyser.java:147) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.scanStacktrace(CrashReportAnalyser.java:116) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.scanThrowable(CrashReportAnalyser.java:102) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.analyseCrashReport(CrashReportAnalyser.java:55) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.appendSuspectedMods(CrashReportAnalyser.java:39) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraft.CrashReport.m_127519_(CrashReport.java:60) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.CrashReport.m_127526_(CrashReport.java:114) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.client.Minecraft.m_91332_(Minecraft.java:842) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91374_(Minecraft.java:743) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:218) ~[Forge%201.20.1.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonClientLaunchHandler.lambda$makeService$0(CommonClientLaunchHandler.java:25) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?] {}
+Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity] from phase [DEFAULT] in config [deepdarkaddition.mixins.json] FAILED during APPLY
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinError(MixinProcessor.java:636) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinApplyError(MixinProcessor.java:588) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:379) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	... 43 more
+Caused by: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @Inject annotation on onHandleGameEvent could not find any targets matching 'handleGameEvent' in net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener. No refMap loaded. [PREINJECT Applicator Phase -> deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> Prepare Injections ->  -> handler$zza000$onHandleGameEvent(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.validateTargets(InjectionInfo.java:656) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.findTargets(InjectionInfo.java:587) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.readAnnotation(InjectionInfo.java:330) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:316) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:308) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo.<init>(CallbackInjectionInfo.java:46) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[?:?] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo$InjectorEntry.create(InjectionInfo.java:149) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.parse(InjectionInfo.java:708) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinTargetContext.prepareInjections(MixinTargetContext.java:1311) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.prepareInjections(MixinApplicatorStandard.java:1042) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyMixin(MixinApplicatorStandard.java:393) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:325) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.apply(TargetClassContext.java:383) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:365) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:363) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	... 43 more
+[22:28:11] [Render thread/FATAL] [ne.mi.co.ForgeMod/]: Preparing crash report with UUID fdc4499c-c434-42ae-b1cf-6a55e9580ab6
 ---- Minecraft Crash Report ----
-// There are four lights!
+// I bet Cylons wouldn't have this problem.
 
-Time: 2025-12-08 20:05:50
-Description: Exception in server tick loop
+Time: 2025-12-08 22:28:11
+Description: Unexpected error
 
 org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
 	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:392) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
@@ -268,36 +536,47 @@ org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An une
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[?:?] {}
 	at net.minecraft.world.level.block.entity.SculkCatalystBlockEntity.<init>(SculkCatalystBlockEntity.java:32) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
 	at net.minecraft.world.level.block.SculkCatalystBlock.m_142194_(SculkCatalystBlock.java:43) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
-	at net.minecraft.world.level.chunk.LevelChunk.m_62934_(LevelChunk.java:288) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
-	at net.minecraft.world.level.chunk.LevelChunk.m_5685_(LevelChunk.java:315) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
-	at net.minecraft.world.level.Level.m_7702_(Level.java:560) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
-	at net.minecraftforge.common.ForgeHooks.onBlockBreakEvent(ForgeHooks.java:535) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
-	at net.minecraft.server.level.ServerPlayerGameMode.m_9280_(ServerPlayerGameMode.java:237) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
-	at net.minecraft.server.level.ServerPlayerGameMode.m_215116_(ServerPlayerGameMode.java:226) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
-	at net.minecraft.server.level.ServerPlayerGameMode.m_214168_(ServerPlayerGameMode.java:148) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
-	at net.minecraft.server.network.ServerGamePacketListenerImpl.m_7502_(ServerGamePacketListenerImpl.java:1018) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B}
-	at net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.m_5797_(ServerboundPlayerActionPacket.java:42) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
-	at net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.m_5797_(ServerboundPlayerActionPacket.java:8) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
-	at net.minecraft.network.protocol.PacketUtils.m_263899_(PacketUtils.java:22) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
-	at net.minecraft.server.TickTask.run(TickTask.java:18) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
-	at net.minecraft.util.thread.BlockableEventLoop.m_6367_(BlockableEventLoop.java:156) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B}
-	at net.minecraft.util.thread.ReentrantBlockableEventLoop.m_6367_(ReentrantBlockableEventLoop.java:23) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
-	at net.minecraft.server.MinecraftServer.m_6367_(MinecraftServer.java:770) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B}
-	at net.minecraft.server.MinecraftServer.m_6367_(MinecraftServer.java:161) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B}
-	at net.minecraft.util.thread.BlockableEventLoop.m_7245_(BlockableEventLoop.java:130) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B}
-	at net.minecraft.server.MinecraftServer.m_129961_(MinecraftServer.java:753) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B}
-	at net.minecraft.server.MinecraftServer.m_7245_(MinecraftServer.java:747) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B}
-	at net.minecraft.util.thread.BlockableEventLoop.m_18699_(BlockableEventLoop.java:115) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B}
-	at net.minecraft.server.MinecraftServer.m_130012_(MinecraftServer.java:732) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B}
-	at net.minecraft.server.MinecraftServer.m_130011_(MinecraftServer.java:665) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B}
-	at net.minecraft.server.MinecraftServer.m_206580_(MinecraftServer.java:251) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B}
-	at java.lang.Thread.run(Thread.java:840) ~[?:?] {}
+	at net.minecraft.world.level.chunk.LevelChunk.m_6978_(LevelChunk.java:263) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.level.Level.m_6933_(Level.java:219) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at net.minecraft.client.multiplayer.ClientLevel.m_6933_(ClientLevel.java:159) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.level.Level.m_7731_(Level.java:196) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at net.minecraft.world.item.BlockItem.m_7429_(BlockItem.java:163) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.item.BlockItem.m_40576_(BlockItem.java:68) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.item.BlockItem.m_6225_(BlockItem.java:46) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.item.ItemStack.lambda$useOn$3(ItemStack.java:246) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.world.item.ItemStack.onItemUse(ItemStack.java:261) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.world.item.ItemStack.m_41661_(ItemStack.java:246) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.m_233746_(MultiPlayerGameMode.java:339) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.m_233740_(MultiPlayerGameMode.java:294) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.m_233729_(MultiPlayerGameMode.java:250) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.m_233732_(MultiPlayerGameMode.java:293) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91277_(Minecraft.java:1698) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91279_(Minecraft.java:1976) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91398_(Minecraft.java:1795) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91383_(Minecraft.java:1112) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91374_(Minecraft.java:718) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:218) ~[Forge%201.20.1.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonClientLaunchHandler.lambda$makeService$0(CommonClientLaunchHandler.java:25) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?] {}
 Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity] from phase [DEFAULT] in config [deepdarkaddition.mixins.json] FAILED during APPLY
 	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinError(MixinProcessor.java:636) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
 	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinApplyError(MixinProcessor.java:588) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
 	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:379) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
-	... 39 more
-Caused by: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @Inject annotation on handleGameEvent could not find any targets matching 'handleGameEvent' in net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener. No refMap loaded. [PREINJECT Applicator Phase -> deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> Prepare Injections ->  -> handler$zza000$handleGameEvent(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
+	... 50 more
+Caused by: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @Inject annotation on onHandleGameEvent could not find any targets matching 'handleGameEvent' in net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener. No refMap loaded. [PREINJECT Applicator Phase -> deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> Prepare Injections ->  -> handler$zza000$onHandleGameEvent(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
 	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.validateTargets(InjectionInfo.java:656) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
 	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.findTargets(InjectionInfo.java:587) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
 	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.readAnnotation(InjectionInfo.java:330) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
@@ -318,11 +597,84 @@ Caused by: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionExce
 	at org.spongepowered.asm.mixin.transformer.TargetClassContext.apply(TargetClassContext.java:383) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
 	at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:365) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
 	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:363) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
-	... 39 more
+	... 50 more
 
 
 A detailed walkthrough of the error, its code path and all known details is as follows:
 ---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:392) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:250) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.service.modlauncher.MixinTransformationHandler.processClass(MixinTransformationHandler.java:131) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.launch.MixinLaunchPluginLegacy.processClass(MixinLaunchPluginLegacy.java:131) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:156) ~[modlauncher-10.0.9.jar:10.0.9+10.0.9+main.dcd20f30] {}
+	at cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:88) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:120) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:50) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.readerToClass(ModuleClassLoader.java:113) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.lambda$findClass$15(ModuleClassLoader.java:219) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.loadFromModule(ModuleClassLoader.java:229) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.findClass(ModuleClassLoader.java:219) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:135) ~[securejarhandler-2.1.10.jar:?] {}
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[?:?] {}
+	at net.minecraft.world.level.block.entity.SculkCatalystBlockEntity.<init>(SculkCatalystBlockEntity.java:32) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.level.block.SculkCatalystBlock.m_142194_(SculkCatalystBlock.java:43) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk.m_6978_(LevelChunk.java:263) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.level.Level.m_6933_(Level.java:219) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at net.minecraft.client.multiplayer.ClientLevel.m_6933_(ClientLevel.java:159) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.level.Level.m_7731_(Level.java:196) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at net.minecraft.world.item.BlockItem.m_7429_(BlockItem.java:163) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.item.BlockItem.m_40576_(BlockItem.java:68) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.item.BlockItem.m_6225_(BlockItem.java:46) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.world.item.ItemStack.lambda$useOn$3(ItemStack.java:246) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.world.item.ItemStack.onItemUse(ItemStack.java:261) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.world.item.ItemStack.m_41661_(ItemStack.java:246) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.m_233746_(MultiPlayerGameMode.java:339) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.m_233740_(MultiPlayerGameMode.java:294) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.m_233729_(MultiPlayerGameMode.java:250) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.multiplayer.MultiPlayerGameMode.m_233732_(MultiPlayerGameMode.java:293) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91277_(Minecraft.java:1698) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91279_(Minecraft.java:1976) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+-- Affected level --
+Details:
+	All players: 1 total; [LocalPlayer['maks_py1'/90, l='ClientLevel', x=-6.03, y=-59.37, z=13.66]]
+	Chunk stats: 961, 609
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,-60,0), Section: (at 0,4,0 in 0,-4,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 40654 game time, 2268 day time
+	Server brand: forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.ClientLevel.m_6026_(ClientLevel.java:455) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91354_(Minecraft.java:2319) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91374_(Minecraft.java:740) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:218) ~[Forge%201.20.1.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonClientLaunchHandler.lambda$makeService$0(CommonClientLaunchHandler.java:25) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?] {}
+
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: Yes
+	Packs: mod_resources, vanilla
 
 -- System Details --
 Details:
@@ -331,7 +683,7 @@ Details:
 	Operating System: Windows 10 (amd64) version 10.0
 	Java Version: 17.0.15, Microsoft
 	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Microsoft
-	Memory: 636130912 bytes (606 MiB) / 1375731712 bytes (1312 MiB) up to 9663676416 bytes (9216 MiB)
+	Memory: 654512952 bytes (624 MiB) / 1887436800 bytes (1800 MiB) up to 9663676416 bytes (9216 MiB)
 	CPUs: 2
 	Processor Vendor: GenuineIntel
 	Processor Name: Intel(R) Pentium(R) CPU G3460 @ 3.50GHz
@@ -357,19 +709,29 @@ Details:
 	Memory slot #1 capacity (MB): 4096.00
 	Memory slot #1 clockSpeed (GHz): 1.60
 	Memory slot #1 type: DDR3
-	Virtual memory max (MB): 23378.04
-	Virtual memory used (MB): 19544.10
-	Swap memory total (MB): 11189.56
-	Swap memory used (MB): 1382.41
-	JVM Flags: 22 total; -Xms855M -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:MaxGCPauseMillis=200 -XX:+AlwaysPreTouch -XX:+ParallelRefProcEnabled -XX:+UseG1GC -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:+UseStringDeduplication -XX:MaxTenuringThreshold=1 -XX:SurvivorRatio=32 -Xmx9216M -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss2M
+	Virtual memory max (MB): 25460.73
+	Virtual memory used (MB): 22218.71
+	Swap memory total (MB): 13272.25
+	Swap memory used (MB): 1927.77
+	JVM Flags: 22 total; -Xms1415M -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:MaxGCPauseMillis=200 -XX:+AlwaysPreTouch -XX:+ParallelRefProcEnabled -XX:+UseG1GC -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:+UseStringDeduplication -XX:MaxTenuringThreshold=1 -XX:SurvivorRatio=32 -Xmx9216M -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss2M
+	Launched Version: Forge 1.20.1
+	Backend library: LWJGL version 3.3.1 build 7
+	Backend API: AMD Radeon (TM) R7 360 Series GL version 4.6.13559 Core Profile Forward-Compatible Context 26.20.12028.2, ATI Technologies Inc.
+	Window size: 1920x1017
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	Type: Integrated Server (map_client.txt)
+	Graphics mode: fast
+	Resource Packs: vanilla
+	Current Language: ru_ru
+	CPU: 2x Intel(R) Pentium(R) CPU G3460 @ 3.50GHz
 	Server Running: true
-	Player Count: 1 / 8; [ServerPlayer['maks_py1'/94, l='ServerLevel[Новый мир]', x=-6.03, y=-59.37, z=13.66]]
+	Player Count: 1 / 8; [ServerPlayer['maks_py1'/90, l='ServerLevel[Новый мир]', x=-6.03, y=-59.37, z=13.66]]
 	Data Packs: vanilla, mod:deepdarkaddition, mod:kotlinforforge (incompatible), mod:forge
 	Enabled Feature Flags: minecraft:vanilla
 	World Generation: Stable
-	Type: Integrated Server (map_client.txt)
-	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
-	Launched Version: Forge 1.20.1
 	ModLauncher: 10.0.9+10.0.9+main.dcd20f30
 	ModLauncher launch target: forgeclient
 	ModLauncher naming: srg
@@ -394,18 +756,148 @@ Details:
 		kffmod-4.11.0.jar                                 |Kotlin For Forge              |kotlinforforge                |4.11.0              |DONE      |Manifest: NOSIGNATURE
 		deepdarkaddition-0.0.2-1.20.1.jar                 |Deep dark addition            |deepdarkaddition              |0.0.2-1.20.1        |DONE      |Manifest: NOSIGNATURE
 		forge-1.20.1-47.4.10-universal.jar                |Forge                         |forge                         |47.4.10             |DONE      |Manifest: 84:ce:76:e8:45:35:e4:0e:63:86:df:47:59:80:0f:67:6c:c1:5f:6e:5f:4d:b3:54:47:1a:9f:7f:ed:5e:f2:90
-	Crash Report UUID: 633791b2-5dd1-415f-b148-119d2c0e2292
+	Crash Report UUID: fdc4499c-c434-42ae-b1cf-6a55e9580ab6
 	FML: 47.4
 	Forge: net.minecraftforge:47.4.10
-#@!@# Game crashed! Crash report saved to: #@!@# C:\Users\Kuler\AppData\Roaming\.minecraft\crash-reports\crash-2025-12-08_20.05.49-server.txt
-[20:05:50] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: maks_py1 lost connection: Сервер закрыт
-[20:05:50] [Server thread/INFO] [minecraft/MinecraftServer]: maks_py1 покинул игру
-[20:05:50] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: Stopping singleplayer server as player logged out
-[20:05:50] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
-[20:05:57] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Новый мир]'/minecraft:overworld
-[20:05:59] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Новый мир]'/minecraft:the_end
-[20:05:59] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Новый мир]'/minecraft:the_nether
-[20:05:59] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (Новый мир (3)): All chunks are saved
-[20:05:59] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[20:05:59] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[20:05:59] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[22:28:11] [Render thread/FATAL] [mixin/]: Mixin apply failed deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException Critical injection failure: @Inject annotation on onHandleGameEvent could not find any targets matching 'handleGameEvent' in net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener. No refMap loaded. [PREINJECT Applicator Phase -> deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> Prepare Injections ->  -> handler$zza000$onHandleGameEvent(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
+org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @Inject annotation on onHandleGameEvent could not find any targets matching 'handleGameEvent' in net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener. No refMap loaded. [PREINJECT Applicator Phase -> deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> Prepare Injections ->  -> handler$zza000$onHandleGameEvent(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.validateTargets(InjectionInfo.java:656) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.findTargets(InjectionInfo.java:587) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.readAnnotation(InjectionInfo.java:330) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:316) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:308) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo.<init>(CallbackInjectionInfo.java:46) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[?:?] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo$InjectorEntry.create(InjectionInfo.java:149) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.parse(InjectionInfo.java:708) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinTargetContext.prepareInjections(MixinTargetContext.java:1311) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.prepareInjections(MixinApplicatorStandard.java:1042) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyMixin(MixinApplicatorStandard.java:393) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:325) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.apply(TargetClassContext.java:383) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:365) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:363) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:250) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.service.modlauncher.MixinTransformationHandler.processClass(MixinTransformationHandler.java:131) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.launch.MixinLaunchPluginLegacy.processClass(MixinLaunchPluginLegacy.java:131) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:156) ~[modlauncher-10.0.9.jar:10.0.9+10.0.9+main.dcd20f30] {}
+	at cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:88) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:120) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:50) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.readerToClass(ModuleClassLoader.java:113) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.lambda$findClass$15(ModuleClassLoader.java:219) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.loadFromModule(ModuleClassLoader.java:229) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.findClass(ModuleClassLoader.java:219) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:135) ~[securejarhandler-2.1.10.jar:?] {}
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[?:?] {}
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[?:?] {}
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[?:?] {}
+	at java.lang.Class.getDeclaredMethods(Class.java:2504) ~[?:?] {}
+	at net.minecraftforge.logging.CrashReportAnalyser.findMixinMerged(CrashReportAnalyser.java:188) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.getMixinInfo(CrashReportAnalyser.java:211) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.identifyByMixins(CrashReportAnalyser.java:147) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.scanStacktrace(CrashReportAnalyser.java:116) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.scanThrowable(CrashReportAnalyser.java:102) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.analyseCrashReport(CrashReportAnalyser.java:55) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.appendSuspectedMods(CrashReportAnalyser.java:39) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraft.CrashReport.m_127519_(CrashReport.java:60) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.CrashReport.m_127526_(CrashReport.java:114) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.CrashReport.m_127512_(CrashReport.java:135) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.client.Minecraft.m_91332_(Minecraft.java:846) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91374_(Minecraft.java:743) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:218) ~[Forge%201.20.1.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonClientLaunchHandler.lambda$makeService$0(CommonClientLaunchHandler.java:25) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?] {}
+[22:28:12] [Render thread/ERROR] [ne.mi.lo.CrashReportAnalyser/]: Failed to append suspected mod(s) to crash report!
+org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:392) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:250) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.service.modlauncher.MixinTransformationHandler.processClass(MixinTransformationHandler.java:131) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.launch.MixinLaunchPluginLegacy.processClass(MixinLaunchPluginLegacy.java:131) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:156) ~[modlauncher-10.0.9.jar:10.0.9+10.0.9+main.dcd20f30] {}
+	at cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:88) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:120) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:50) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.readerToClass(ModuleClassLoader.java:113) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.lambda$findClass$15(ModuleClassLoader.java:219) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.loadFromModule(ModuleClassLoader.java:229) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.findClass(ModuleClassLoader.java:219) ~[securejarhandler-2.1.10.jar:?] {}
+	at cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:135) ~[securejarhandler-2.1.10.jar:?] {}
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[?:?] {}
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[?:?] {}
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[?:?] {}
+	at java.lang.Class.getDeclaredMethods(Class.java:2504) ~[?:?] {}
+	at net.minecraftforge.logging.CrashReportAnalyser.findMixinMerged(CrashReportAnalyser.java:188) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.getMixinInfo(CrashReportAnalyser.java:211) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.identifyByMixins(CrashReportAnalyser.java:147) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.scanStacktrace(CrashReportAnalyser.java:116) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.scanThrowable(CrashReportAnalyser.java:102) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.analyseCrashReport(CrashReportAnalyser.java:55) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraftforge.logging.CrashReportAnalyser.appendSuspectedMods(CrashReportAnalyser.java:39) ~[forge-1.20.1-47.4.10-universal.jar%23165!/:?] {re:classloading}
+	at net.minecraft.CrashReport.m_127519_(CrashReport.java:60) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.CrashReport.m_127526_(CrashReport.java:114) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.CrashReport.m_127512_(CrashReport.java:135) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading}
+	at net.minecraft.client.Minecraft.m_91332_(Minecraft.java:846) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91374_(Minecraft.java:743) ~[client-1.20.1-20230612.114412-srg.jar%23160!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:218) ~[Forge%201.20.1.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonClientLaunchHandler.lambda$makeService$0(CommonClientLaunchHandler.java:25) ~[fmlloader-1.20.1-47.4.10.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?] {}
+Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity] from phase [DEFAULT] in config [deepdarkaddition.mixins.json] FAILED during APPLY
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinError(MixinProcessor.java:636) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinApplyError(MixinProcessor.java:588) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:379) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	... 44 more
+Caused by: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @Inject annotation on onHandleGameEvent could not find any targets matching 'handleGameEvent' in net.minecraft.world.level.block.entity.SculkCatalystBlockEntity$CatalystListener. No refMap loaded. [PREINJECT Applicator Phase -> deepdarkaddition.mixins.json:MixinSculkCatalystBlockEntity -> Prepare Injections ->  -> handler$zza000$onHandleGameEvent(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.validateTargets(InjectionInfo.java:656) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.findTargets(InjectionInfo.java:587) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.readAnnotation(InjectionInfo.java:330) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:316) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:308) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo.<init>(CallbackInjectionInfo.java:46) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[?:?] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo$InjectorEntry.create(InjectionInfo.java:149) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.parse(InjectionInfo.java:708) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinTargetContext.prepareInjections(MixinTargetContext.java:1311) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.prepareInjections(MixinApplicatorStandard.java:1042) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyMixin(MixinApplicatorStandard.java:393) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:325) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.apply(TargetClassContext.java:383) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:365) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:363) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4] {}
+	... 44 more
+[22:28:12] [Render thread/FATAL] [ne.mi.co.ForgeMod/]: Preparing crash report with UUID e90f8a2f-b123-409d-bee9-30f3702f3736
+#@!@# Game crashed! Crash report saved to: #@!@# C:\Users\Kuler\AppData\Roaming\.minecraft\crash-reports\crash-2025-12-08_22.28.11-client.txt
