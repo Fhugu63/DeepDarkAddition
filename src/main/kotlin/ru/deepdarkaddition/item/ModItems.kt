@@ -10,7 +10,7 @@ import net.minecraftforge.registries.ForgeRegistries
 class ModItems {
     val REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, MainScript.MOD_ID)
 
-    val mythycalRarity = Rarity.create("MYTHICAL", ChatFormatting.DARK_RED)
+    //val mythycalRarity = Rarity.create("MYTHICAL", ChatFormatting.DARK_RED)
 
     val RESEARHDIARYPARTONE = REGISTRY.register("rdp_one") {
         ResearhDiaryPartOneItem(Item.Properties().rarity(Rarity.RARE))
@@ -30,11 +30,11 @@ class ModItems {
 
     val RESEARHDIARYPARTFIVE = REGISTRY.register("rdp_five") {
         ResearhDiaryPartFiveItem(Item.Properties().rarity(Rarity.RARE))
-    }*/
+    }
 
     val HUNGRYSOUL = REGISTRY.register("hungry_soul") {
         HungySoulItem(Item.Properties().rarity(mythycalRarity).stacksTo(1))
-    }
+    }*/
 
     companion object {
 

@@ -68,6 +68,7 @@ class SoundListiner {
     fun onDestroyBlock(event: BlockEvent.BreakEvent) {
         val entity = event.player as Entity
         val pos = event.pos
+
         val sculkCreepers: List<SculkCreeperEntity> = entity.level().getEntitiesOfClass(SculkCreeperEntity::class.java, AABB.ofSize(pos.center, 32.0, 32.0, 32.0))
         sculkCreepers.forEach { sculkCreeperEntity -> sculkCreeperEntity.soundVibration(entity, pos) }
     }

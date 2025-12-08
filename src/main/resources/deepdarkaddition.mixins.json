@@ -5,10 +5,13 @@
   "package": "ru.deepdarkaddition.mixins",
   "refmap": "deepdarkadddition.refmap.json",
   "mixins": [
+    "MixinSculkCatalystBlockEntity"
   ],
   "client": [],
-  "server": [],
+  "server": [
+
+  ],
   "injectors": {
-    "defaultRequire": 0
+    "defaultRequire": 1
   }
 }

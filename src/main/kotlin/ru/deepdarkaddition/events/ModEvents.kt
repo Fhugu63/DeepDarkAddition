@@ -1,5 +1,6 @@
 package ru.deepdarkaddition.events
 
+import net.minecraft.ChatFormatting
 import ru.deepdarkaddition.engine.CalculationScript
 import ru.deepdarkaddition.MainScript
 import ru.deepdarkaddition.entity.ModEntities
@@ -8,6 +9,9 @@ import ru.deepdarkaddition.interfaces.IHungrySouls
 import net.minecraft.client.Minecraft
 import net.minecraft.core.BlockPos
 import net.minecraft.nbt.CompoundTag
+import net.minecraft.network.chat.Component
+import net.minecraft.network.chat.Style
+import net.minecraft.server.level.ServerLevel
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityType
 import net.minecraft.world.phys.AABB
@@ -19,6 +23,7 @@ import net.minecraftforge.event.TickEvent
 import net.minecraftforge.event.entity.EntityEvent
 import net.minecraftforge.event.entity.living.LivingDeathEvent
 import net.minecraftforge.event.entity.player.AttackEntityEvent
+import net.minecraftforge.event.entity.player.PlayerEvent
 import net.minecraftforge.event.entity.player.PlayerInteractEvent
 import net.minecraftforge.event.level.BlockEvent
 import net.minecraftforge.event.level.ChunkDataEvent
@@ -89,7 +94,7 @@ class ModEvents() : IHungrySouls {
     //Метод срабатывающий каждый тик
     @SubscribeEvent
     fun onTickUpdate(event: TickEvent) {
-        if (!getSouls().isEmpty()) {
+        /*if (!getSouls().isEmpty()) {
             getSouls().forEach { (key, value) ->
                 val hungrySoul = key
                 val playerEntity = value
@@ -113,9 +118,9 @@ class ModEvents() : IHungrySouls {
                     movedTime = 0
                 }
             }
-        }
+        }*/
 
-        //logger.info(SculkCatalystBlock.)
+
     }
 
     @SubscribeEvent
@@ -169,10 +174,22 @@ class ModEvents() : IHungrySouls {
             }
         }
     }
-    //Тесты
-    val level = minecraft.level?.server?.getLevel(minecraft.level?.dimension())
-    //val test = level?.findNearestMapStructure(StructureTags., player?.onPos, 1000, false)
-    //val test = Anci
+
+    @SubscribeEvent
+    fun onPickUpLoot(event: PlayerEvent.ItemPickupEvent) {
+        val player = event.entity
+        val item = event.originalEntity.item
+
+        if (item.hoverName == Component.translatable("Cobblestone")) {
+            val level = player.level()
+            if (!level.isClientSide) {
+                (level as ServerLevel).server.sendSystemMessage(Component.translatable("короче, типо ищи ну как бы древний город, хз что ещё сказать").withStyle(
+                    ChatFormatting.OBFUSCATED))
+            }
+            player.sendSystemMessage(Component.translatable("короче, типо ищи ну как бы древний город, хз что ещё сказать").withStyle(
+                ChatFormatting.OBFUSCATED))
+        }
+    }
 
     @SubscribeEvent
     fun executedCommand(event: CommandEvent) {
