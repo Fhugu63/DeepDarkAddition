@@ -30,8 +30,8 @@ import org.spongepowered.asm.mixin.Shadow;
 
 @Mixin(SculkCatalystBlockEntity.CatalystListener.class)
 public abstract class MixinSculkCatalystBlockEntity implements GameEventListener {
-    @Inject(method = "handleGameEvent", at = @At("END"), cancellable = true)
-    public void handleGameEvent(ServerLevel pLevel, GameEvent pGameEvent, GameEvent.Context pContext, Vec3 pPos, CallbackInfoReturnable<Boolean> cir) {
+    @Inject(method = "handleGameEvent", at = @At("HEAD"), cancellable = true)
+    private void onHandleGameEvent(ServerLevel pLevel, GameEvent pGameEvent, GameEvent.Context pContext, Vec3 pPos, CallbackInfoReturnable<Boolean> cir) {
         // Логика остается прежней
         if (pGameEvent == GameEvent.ENTITY_DIE) {
             Entity sourceEntity = pContext.sourceEntity();
@@ -52,5 +52,8 @@ public abstract class MixinSculkCatalystBlockEntity implements GameEventListener
                 }
             }
         }
+
+        cir.setReturnValue(true);
+        cir.cancel();
     }
 }
