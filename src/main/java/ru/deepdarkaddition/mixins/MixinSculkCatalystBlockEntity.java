@@ -32,21 +32,16 @@ import org.spongepowered.asm.mixin.Shadow;
 public abstract class MixinSculkCatalystBlockEntity implements GameEventListener {
     @Inject(method = "handleGameEvent", at = @At("HEAD"), cancellable = true)
     private void onHandleGameEvent(ServerLevel pLevel, GameEvent pGameEvent, GameEvent.Context pContext, Vec3 pPos, CallbackInfoReturnable<Boolean> cir) {
-        // Логика остается прежней
         if (pGameEvent == GameEvent.ENTITY_DIE) {
             Entity sourceEntity = pContext.sourceEntity();
             if (sourceEntity instanceof LivingEntity) {
                 LivingEntity livingEntity = (LivingEntity) sourceEntity;
                 if (!livingEntity.wasExperienceConsumed()) {
-                    // int expReward = livingEntity.getExperienceReward(); // Можно использовать, если нужно
-
                     if (sourceEntity.getType() == EntityType.CREEPER) {
                         Entity myEntity = ModEntities.SCULKCREEPERENTITY.get().create(sourceEntity.level());
                         if (myEntity != null) {
                             myEntity.moveTo(sourceEntity.position().x, sourceEntity.position().y, sourceEntity.position().z);
                             sourceEntity.level().addFreshEntity(myEntity);
-                            // Если вы хотите, чтобы метод вернул true (успешно обработал событие)
-                            // cir.setReturnValue(true);
                         }
                     }
                 }

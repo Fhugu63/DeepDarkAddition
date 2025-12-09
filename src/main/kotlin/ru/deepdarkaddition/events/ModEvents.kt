@@ -14,6 +14,8 @@ import net.minecraft.network.chat.Style
 import net.minecraft.server.level.ServerLevel
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityType
+import net.minecraft.world.entity.player.Player
+import net.minecraft.world.item.ItemStack
 import net.minecraft.world.phys.AABB
 import net.minecraft.world.phys.Vec3
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent
@@ -32,10 +34,11 @@ import ru.deepdarkaddition.engine.AnnotationProcessor
 import java.util.*
 import ru.deepdarkaddition.engine.Methods
 import ru.deepdarkaddition.entity.custom.SculkCreeperEntity
+import ru.deepdarkaddition.item.ModItems
 import kotlin.math.abs
 
 
-class ModEvents() : IHungrySouls {
+class ModEvents() {
     var minecraft: Minecraft = Minecraft.getInstance()
 
     var player = minecraft.level?.getPlayerByUUID(UUID.fromString(""))
@@ -45,15 +48,6 @@ class ModEvents() : IHungrySouls {
     var flagSpawnSoul = true
 
     val logger = MainScript.LOGGER
-
-    var namesOfHungrySouls = arrayOf<String>()
-    var numOfHungrySouls = 0
-
-    var ihungrySouls: LazyOptional<IHungrySouls> = LazyOptional.of { this }
-
-    //override var ownerOfSoul = ihungrySouls.resolve().get().ownerOfSoul
-
-    override var ownerOfSoul: MutableMap<HungrySoulEntity?, Entity> = mutableMapOf<HungrySoulEntity?, Entity>()
 
     var movedTime = 0
 /*
@@ -68,27 +62,6 @@ class ModEvents() : IHungrySouls {
 
     val provider = this.getCapability(OwnerOfHungrySoulCapability().OWNEROFSOUL_HANDLER, null)*/
 
-
-    //Инициализация методов интерфейса
-    override fun getSouls(): MutableMap<HungrySoulEntity?, Entity> {
-        return ownerOfSoul
-    }
-
-    override fun getPlayerBySoul(keySoul: HungrySoulEntity?): Entity? {
-        return ownerOfSoul.get(keySoul)
-
-    }
-
-    override fun addSoul(
-        soulEntity: HungrySoulEntity?,
-        pEntity: Entity
-    ) {
-        ownerOfSoul.put(soulEntity, pEntity)
-    }
-
-    override fun removeSoul(removebleSoul: HungrySoulEntity) {
-        ownerOfSoul.remove(removebleSoul)
-    }
 
 
     //Метод срабатывающий каждый тик
@@ -136,12 +109,13 @@ class ModEvents() : IHungrySouls {
 
     @SubscribeEvent
     fun dropItemFromEntity(event: LivingDeathEvent) {
+        val damageSourceEntity = event.source.entity
         val entity = event.entity
         if (flagSpawnSoul) {
-            if (entity.type == EntityType.WARDEN) {
+            if (entity.type == EntityType.WARDEN && damageSourceEntity != null) {
                 MainScript.LOGGER.info("warden is died")
 
-                val hungrySoul = ModEntities.HUNGRYSOULENTITY.get().create(player?.level())!!
+                val hungrySoul = ModEntities.HUNGRYSOULENTITY.get().create(damageSourceEntity.level())!!
                 hungrySoul.moveTo(entity.x, entity.y+2, entity.z)
                 hungrySoul.isNoGravity = true
                 hungrySoul.numOfEatenSouls = 5
@@ -149,28 +123,15 @@ class ModEvents() : IHungrySouls {
                 //namesOfHungrySouls += "hungrysoul${numOfHungrySouls}"
                 val entity = event.source.entity
                 if (entity != null) {
-                    addSoul(hungrySoul, entity)
+                    hungrySoul.setOwnerOfSoulUUID(entity.uuid)
                 }
 
-                logger.info(event.source.entity?.name.toString())
                 player?.level()?.addFreshEntity(hungrySoul)
                 player?.sendSystemMessage(net.minecraft.network.chat.Component.translatable("[голодная душа] ты меня освободил, теперь накорми меня живыми существами и возможно и я исполню твоё желание"))
 
-                //val tag = CompoundTag()
-                //tag.putInt()
-                val nbt = CompoundTag()
-                hungrySoul.saveWithoutId(nbt)
-
-                nbt.putInt("numOfEatenSouls", 5)
-
-                hungrySoul.load(nbt)
-
-                logger.info(hungrySoul.loadAdditional(CompoundTag()))
-
-
                 flagSpawnSoul = false
 
-                numOfHungrySouls++
+                //numOfHungrySouls++
             }
         }
     }
@@ -180,7 +141,7 @@ class ModEvents() : IHungrySouls {
         val player = event.entity
         val item = event.originalEntity.item
 
-        if (item.hoverName == Component.translatable("Cobblestone")) {
+        if (item.displayName == Component.translatable("Cobblestone")) {
             val level = player.level()
             if (!level.isClientSide) {
                 (level as ServerLevel).server.sendSystemMessage(Component.translatable("короче, типо ищи ну как бы древний город, хз что ещё сказать").withStyle(
@@ -197,7 +158,30 @@ class ModEvents() : IHungrySouls {
         //HungrySoulRender.scale = 5f
     }
 
+    private val TAG_GIVEN_STARTER_ITEMS = "has_received_starter_items"
 
+    @SubscribeEvent
+    fun onPlayerLoggedIn(event: PlayerEvent.PlayerLoggedInEvent) {
+        val player = event.entity
+        val level = player.level()
+
+        if (level.isClientSide) return
+
+
+        val persistentData = player.persistentData
+
+        val modData = persistentData.getCompound("deepdarkaddition")
+
+        // Проверяем флаг
+        if (!modData.getBoolean(TAG_GIVEN_STARTER_ITEMS)) {
+            val starterItem = ItemStack(ModItems().TUTORIALBOOKITEM.get(), 1)
+            player.inventory.add(starterItem)
+
+            modData.putBoolean(TAG_GIVEN_STARTER_ITEMS, true)
+
+            persistentData.put("deepdarkaddition", modData)
+        }
+    }
 
     fun registerCaps(event: RegisterCapabilitiesEvent) {
         //event.register<IExampleCapability?>(IExampleCapability::class.java)

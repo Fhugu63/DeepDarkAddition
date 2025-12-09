@@ -2,6 +2,7 @@ package ru.deepdarkaddition
 
 import net.minecraft.client.Minecraft
 import net.minecraft.client.renderer.entity.EntityRenderers
+import net.minecraft.world.level.block.entity.SculkCatalystBlockEntity
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.eventbus.api.EventPriority
 import net.minecraftforge.fml.common.Mod
@@ -47,6 +48,8 @@ class MainScript {
         MinecraftForge.EVENT_BUS.register(ModEvents())
         MinecraftForge.EVENT_BUS.register(SoundListiner())
 
+        //MOD_BUS.addGenericListener(SculkCatalystBlockEntity.CatalystListener::class.java, SculkCatalystBlockEntity.CatalystListener())
+
         //MinecraftForge.EVENT_BUS.register(ModEvents())
 
         //ModLootModifiers.register(MOD_BUS)
@@ -74,6 +77,7 @@ class MainScript {
         EntityRenderers.register(ModEntities.HUNGRYSOULENTITY.get(), ::HungrySoulRender)
         EntityRenderers.register(ModEntities.SCULKCREEPERENTITY.get(), ::SculkCreeperRenderer)
 
+        //SculkCatalystBlockEntity.CatalystListener.
         //ModEvents().provider.ifPresent { cap -> ModEvents().ownerOfSoul = cap.getSouls()!! }
     }
 

@@ -39,7 +39,11 @@ import java.util.UUID
 import java.util.function.Consumer
 import java.util.function.Predicate
 import net.minecraft.world.entity.ai.navigation.PathNavigation
+import net.minecraft.world.item.ItemStack
+import org.apache.logging.log4j.core.jmx.Server
+import ru.deepdarkaddition.engine.DeepDarkAdditionSaveData
 import ru.deepdarkaddition.engine.Methods
+import ru.deepdarkaddition.item.ModItems
 
 
 class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Level) : PathfinderMob(pEntityType, pLevel) {
@@ -63,7 +67,7 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
         nbt.putInt("cdToAbility", cooldownToAbility)
         nbt.putInt("numOfAngry", numOfAngry)
         if (targetUUID != null) {
-            nbt.putUUID("targetUUID", targetUUID)
+            nbt.putUUID("targetUUID", targetUUID!!)
         }
     }
 
@@ -78,7 +82,43 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
         }
         if (nbt.contains("targetUUID")) {
             targetUUID = nbt.getUUID("targetUUID")
-            target = level().getPlayerByUUID(targetUUID)
+            target = level().getPlayerByUUID(targetUUID!!)
+        }
+    }
+
+    override fun dropCustomDeathLoot(pSource: DamageSource, pLooting: Int, pRecentlyHit: Boolean) {
+        super.dropCustomDeathLoot(pSource, pLooting, pRecentlyHit)
+
+        if (pSource.entity != null && !pSource.entity!!.level().isClientSide) {
+            val entity = pSource.entity!!
+            val sLevel = entity.level() as ServerLevel
+            val savedData = DeepDarkAdditionSaveData.getSavedData(sLevel)
+
+            val diarys = savedData.diarys
+            val splitedDiarys = diarys.split(", ")
+
+            var diaryHasSelected = false
+
+            if (!splitedDiarys.contains("rdp1") && !diaryHasSelected) {
+                diaryHasSelected = true
+
+                val item = ItemStack(ModItems().RESEARHDIARYPARTONE.get(), 1)
+
+                savedData.diarys += "rdp1, "
+                savedData.setDirty()
+
+                this.spawnAtLocation(item)
+            }
+            if (!splitedDiarys.contains("rdp2") && !diaryHasSelected) {
+                diaryHasSelected = true
+
+                val item = ItemStack(ModItems().RESEARHDIARYPARTTWO.get(), 1)
+
+                savedData.diarys += "rdp2, "
+                savedData.setDirty()
+
+                this.spawnAtLocation(item)
+            }
         }
     }
 
@@ -187,7 +227,13 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
         }
     }
 
-
+    fun jump() {
+        if (this.onGround()) {
+            val jumpStrength = 0.42 // Стандартная сила прыжка
+            this.deltaMovement.y
+            this.hasImpulse = true
+        }
+    }
 
     override fun tick() {
         if (!this.level().isClientSide) {
@@ -211,7 +257,11 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
 
                 this.navigation.moveTo(target!!.x, target!!.y, target!!.z, desiredSpeed)
 
-                lookAtTarget()
+                if (target!!.y-this.y >= 1.5) {
+                    //jump()
+                }
+
+
                 if (this.tickCount % 6 == 0 && numOfAngry <= 150) {
                     numOfAngry++
                 }
@@ -231,10 +281,6 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
         }
 
         super.tick()
-    }
-
-    fun lookAtTarget() {
-        this.lookAt(target, 10F, 10F)
     }
 
     // Компаньон-объект для создания аттрибутов сущности

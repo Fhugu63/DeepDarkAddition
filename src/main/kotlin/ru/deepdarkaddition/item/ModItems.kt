@@ -1,11 +1,12 @@
 package ru.deepdarkaddition.item
 
 import ru.deepdarkaddition.MainScript
-import net.minecraft.ChatFormatting
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.Rarity
 import net.minecraftforge.registries.DeferredRegister
 import net.minecraftforge.registries.ForgeRegistries
+import ru.deepdarkaddition.item.ResearhDiarys.ResearhDiaryPartOneItem
+import ru.deepdarkaddition.item.ResearhDiarys.ResearhDiaryPartTwoItem
 
 class ModItems {
     val REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, MainScript.MOD_ID)
@@ -18,6 +19,10 @@ class ModItems {
 
     val RESEARHDIARYPARTTWO = REGISTRY.register("rdp_two") {
         ResearhDiaryPartTwoItem(Item.Properties().rarity(Rarity.RARE))
+    }
+
+    val TUTORIALBOOKITEM = REGISTRY.register("tutorial_book") {
+        TutorialBookItem(Item.Properties().stacksTo(1))
     }
 /*
     val RESEARHDIARYPARTTHREE = REGISTRY.register("rdp_three") {

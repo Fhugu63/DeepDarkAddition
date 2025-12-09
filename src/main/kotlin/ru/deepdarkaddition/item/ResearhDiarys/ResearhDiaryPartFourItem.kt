@@ -1,4 +1,4 @@
-package ru.deepdarkaddition.item
+package ru.deepdarkaddition.item.ResearhDiarys
 
 import ru.deepdarkaddition.UI.DiaryWindow
 import net.minecraft.world.InteractionHand
