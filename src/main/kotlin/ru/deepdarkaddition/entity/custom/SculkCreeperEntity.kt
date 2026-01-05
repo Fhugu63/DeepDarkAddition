@@ -40,6 +40,7 @@ import java.util.function.Consumer
 import java.util.function.Predicate
 import net.minecraft.world.entity.ai.navigation.PathNavigation
 import net.minecraft.world.item.ItemStack
+import net.minecraft.world.level.block.Blocks
 import org.apache.logging.log4j.core.jmx.Server
 import ru.deepdarkaddition.engine.DeepDarkAdditionSaveData
 import ru.deepdarkaddition.engine.Methods
@@ -94,17 +95,19 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
             val sLevel = entity.level() as ServerLevel
             val savedData = DeepDarkAdditionSaveData.getSavedData(sLevel)
 
-            val diarys = savedData.diarys
-            val splitedDiarys = diarys.split(", ")
+            var diarys = savedData.diarys
+            val splitedDiarys = diarys.split(",")
 
             var diaryHasSelected = false
+
+            println(splitedDiarys.contains("rdp1"))
 
             if (!splitedDiarys.contains("rdp1") && !diaryHasSelected) {
                 diaryHasSelected = true
 
                 val item = ItemStack(ModItems().RESEARHDIARYPARTONE.get(), 1)
 
-                savedData.diarys += "rdp1, "
+                savedData.diarys += "rdp1,"
                 savedData.setDirty()
 
                 this.spawnAtLocation(item)
@@ -114,7 +117,17 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
 
                 val item = ItemStack(ModItems().RESEARHDIARYPARTTWO.get(), 1)
 
-                savedData.diarys += "rdp2, "
+                savedData.diarys += "rdp2,"
+                savedData.setDirty()
+
+                this.spawnAtLocation(item)
+            }
+            if (!splitedDiarys.contains("rdp3") && !diaryHasSelected) {
+                diaryHasSelected = true
+
+                val item = ItemStack(ModItems().RESEARHDIARYPARTTHREE.get(), 1)
+
+                savedData.diarys += "rdp3,"
                 savedData.setDirty()
 
                 this.spawnAtLocation(item)
@@ -229,8 +242,9 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
 
     fun jump() {
         if (this.onGround()) {
-            val jumpStrength = 0.42 // Стандартная сила прыжка
-            this.deltaMovement.y
+            val jumpStrength = 2
+            //this.deltaMovement.
+            this.moveTo(this.x, this.y+jumpStrength, this.z)
             this.hasImpulse = true
         }
     }
@@ -241,6 +255,7 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
 
             if (this.tickCount % 40 == 0) {
                 Warden.applyDarknessAround(serverLevel, position(), this, 16)
+
             }
 
 
@@ -257,8 +272,8 @@ class SculkCreeperEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Lev
 
                 this.navigation.moveTo(target!!.x, target!!.y, target!!.z, desiredSpeed)
 
-                if (target!!.y-this.y >= 1.5) {
-                    //jump()
+                if (target!!.y-this.y >= 1.5 && (this.distanceTo(target) - (target!!.y - this.y)) <= 2 && this.tickCount % 60 == 0) {
+                    jump()
                 }
 
 

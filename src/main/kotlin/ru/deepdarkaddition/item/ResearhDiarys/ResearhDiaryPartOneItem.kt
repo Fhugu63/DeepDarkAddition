@@ -12,15 +12,10 @@ import net.minecraft.client.Minecraft
 
 class ResearhDiaryPartOneItem(settings: Properties) : Item(settings) {
     var flag: Boolean = false
-    val diaryWindow: DiaryWindow = DiaryWindow(Component.translatable("test"), 1)
+    //val diaryWindow: DiaryWindow = DiaryWindow(Component.translatable("test"), 1)
 
     override fun use(pLevel: Level, pPlayer: Player, pUsedHand: InteractionHand): InteractionResultHolder<ItemStack> {
-        if (!flag) {
-            diaryWindow.numOfPart = 1
-            Minecraft.getInstance().setScreen(diaryWindow)
-
-            flag = !flag
-        }
+        pPlayer.sendSystemMessage(Component.translatable("diary.part1"))
 
         return super.use(pLevel, pPlayer, pUsedHand)
     }

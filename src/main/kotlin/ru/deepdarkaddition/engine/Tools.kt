@@ -5,17 +5,12 @@ import net.minecraft.server.level.ServerLevel
 import net.minecraft.world.level.saveddata.SavedData
 import net.minecraft.world.level.storage.DimensionDataStorage
 
-class DeepDarkAdditionSaveData() : SavedData() {
+class DeepDarkAdditionSaveData() : WorldDataHandler() {
+    override val DATA_NAME = "deep_dark_addition_data"
+
     var diarys: String = ""
 
-    override fun save(pCompoundTag: CompoundTag): CompoundTag {
-        pCompoundTag.putString("colectedDiarys", diarys)
-        return pCompoundTag
-    }
-
     companion object {
-        const val DATA_NAME = "deep_dark_addition_data"
-
         fun load(nbt: CompoundTag): DeepDarkAdditionSaveData {
             val data = DeepDarkAdditionSaveData()
             data.diarys = nbt.getString("colectedDiarys")
@@ -25,7 +20,7 @@ class DeepDarkAdditionSaveData() : SavedData() {
         fun getSavedData(sLevel: ServerLevel): DeepDarkAdditionSaveData {
             val storage = sLevel.dataStorage
 
-            return storage.computeIfAbsent(::load, ::DeepDarkAdditionSaveData, DATA_NAME)
+            return storage.computeIfAbsent(::load, ::DeepDarkAdditionSaveData, DeepDarkAdditionSaveData().DATA_NAME)
         }
     }
 }

@@ -11,15 +11,11 @@ import net.minecraft.network.chat.Component
 import net.minecraft.client.Minecraft
 
 class ResearhDiaryPartThreeItem(settings: Properties) : Item(settings) {
-    public var flag: Boolean = false
-    val diaryWindow: DiaryWindow = DiaryWindow(Component.translatable("test"), 4)
+    var flag: Boolean = false
+    //val diaryWindow: DiaryWindow = DiaryWindow(Component.translatable("test"), 1)
 
     override fun use(pLevel: Level, pPlayer: Player, pUsedHand: InteractionHand): InteractionResultHolder<ItemStack> {
-        if (!flag) {
-            Minecraft.getInstance().setScreen(diaryWindow)
-
-            flag = !flag
-        }
+        pPlayer.sendSystemMessage(Component.translatable("diary.part3"))
 
         return super.use(pLevel, pPlayer, pUsedHand)
     }

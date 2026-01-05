@@ -1,12 +1,10 @@
 package ru.deepdarkaddition.engine
 
 import net.minecraft.nbt.CompoundTag
+import net.minecraft.server.level.ServerPlayer
 import net.minecraft.world.entity.Entity
-import net.minecraft.world.entity.EquipmentSlot
-import net.minecraft.world.entity.HumanoidArm
-import net.minecraft.world.entity.LivingEntity
-import net.minecraft.world.item.ItemStack
 import net.minecraft.world.phys.Vec3
+import ru.deepdarkaddition.worldgen.dimensions.ModDimensions
 
 
 class Methods {
@@ -26,6 +24,7 @@ class Methods {
                 else if (raznicaInPosition.z<1&&raznicaInPosition.z>-1) {entity.z} else {(entity.z-speed)}
         ))
     }
+
 }
 
 class MyEntity {

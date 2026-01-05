@@ -2,6 +2,7 @@ package ru.deepdarkaddition.mixins;
 
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import ru.deepdarkaddition.entity.ModEntities;
 import net.minecraft.core.BlockPos;
@@ -30,25 +31,24 @@ import org.spongepowered.asm.mixin.Shadow;
 
 @Mixin(SculkCatalystBlockEntity.CatalystListener.class)
 public abstract class MixinSculkCatalystBlockEntity implements GameEventListener {
-    @Inject(method = "handleGameEvent", at = @At("HEAD"), cancellable = true)
-    private void onHandleGameEvent(ServerLevel pLevel, GameEvent pGameEvent, GameEvent.Context pContext, Vec3 pPos, CallbackInfoReturnable<Boolean> cir) {
+    @Inject(method = "handleGameEvent", at = @At("HEAD"))
+    private void onHandleGameEvent(
+            ServerLevel pLevel,
+            GameEvent pGameEvent,
+            GameEvent.Context pContext,
+            Vec3 pPos,
+            CallbackInfo ci
+    ) {
         if (pGameEvent == GameEvent.ENTITY_DIE) {
             Entity sourceEntity = pContext.sourceEntity();
-            if (sourceEntity instanceof LivingEntity) {
-                LivingEntity livingEntity = (LivingEntity) sourceEntity;
+            if (sourceEntity instanceof LivingEntity livingEntity) {
                 if (!livingEntity.wasExperienceConsumed()) {
-                    if (sourceEntity.getType() == EntityType.CREEPER) {
-                        Entity myEntity = ModEntities.SCULKCREEPERENTITY.get().create(sourceEntity.level());
-                        if (myEntity != null) {
-                            myEntity.moveTo(sourceEntity.position().x, sourceEntity.position().y, sourceEntity.position().z);
-                            sourceEntity.level().addFreshEntity(myEntity);
-                        }
-                    }
+                    Entity myEntity = ModEntities.SCULKCREEPERENTITY.get().create(sourceEntity.level());
+                    myEntity.moveTo(sourceEntity.position().x, sourceEntity.position().y, sourceEntity.position().z);
+                    sourceEntity.level().addFreshEntity(myEntity);
                 }
             }
         }
-
-        cir.setReturnValue(true);
-        cir.cancel();
     }
+
 }

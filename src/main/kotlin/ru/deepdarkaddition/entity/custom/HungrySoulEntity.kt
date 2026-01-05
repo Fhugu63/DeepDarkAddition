@@ -13,6 +13,9 @@ import net.minecraft.world.entity.ai.goal.BreedGoal
 import net.minecraft.world.entity.ai.goal.FloatGoal
 import net.minecraft.world.entity.animal.Animal
 import net.minecraft.world.level.Level
+import ru.deepdarkaddition.engine.CalculationScript
+import ru.deepdarkaddition.engine.Methods
+import ru.deepdarkaddition.entity.FollowPlayerGoal
 import ru.deepdarkaddition.interfaces.IHungrySouls
 import java.util.UUID
 
@@ -55,7 +58,7 @@ class HungrySoulEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Level
             val sLevel = level() as ServerLevel
             val playerOwner = sLevel.getPlayerByUUID(ownerOfSoul!!)
             if (playerOwner != null) {
-                this.navigation.moveTo(playerOwner, 0.4)
+                Methods().smoothMovement(this, playerOwner, 0.4f)
             }
         }
     }
@@ -68,6 +71,7 @@ class HungrySoulEntity(pEntityType: EntityType<out PathfinderMob>, pLevel: Level
     */
     override fun registerGoals() {
         goalSelector.addGoal(0, FloatGoal(this))
+
 
         //goalSelector.addGoal(1, BreedGoal(this, 1.15))
     }
